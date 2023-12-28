@@ -1,0 +1,11 @@
+node_modules
+package-lock.json
+yarn.lock
+public/fonts
+.cache
+.idea
+.yarn
+.pnp.cjs
+.pnp.loader.mjs
+build
+src/stories/**/*.mdx

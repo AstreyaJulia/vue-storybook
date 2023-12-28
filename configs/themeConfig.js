@@ -34,6 +34,13 @@ const themeConfig = {
             { name: "rose", color: "rose" },
             { name: "orange", color: "orange" },
         ],
+        ui: {
+            bg: ['50'], // colors.main[0]color - цвет фона
+            border: ['200'], // colors.main[0]color - цвет бордюра полей ввода
+            textMain: ['900'], // colors.main[0]color - цвет основного текста
+            textSecondary: ['700'], // colors.main[0]color - цвет второстепенного текста
+            textTertiary: ['500'], // colors.main[0]color - цвет третичного текста
+        }
     },
 };
 

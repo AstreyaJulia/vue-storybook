@@ -1,5 +1,5 @@
 /** Шрифт Inter */
-@import "../../public/fonts/inter/index.css";
+@import '../../public/fonts/inter/index.css';
 
 @tailwind base;
 @tailwind components;

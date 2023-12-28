@@ -1,0 +1,16 @@
+import { Canvas, Meta, Title } from "@storybook/blocks";
+import * as ButtonGroup from "./ButtonGroup.stories";
+import { styles } from "./styles/mdxStorybookStyes";
+
+<Meta of={ButtonGroup} />
+<Title>Группы кнопок</Title>
+
+<p className="story storybook-text">Группы кнопок объединяют наборы кнопок в панели инструментов или разделяют кнопки для более сложных компонентов. Группы кнопок также полезны для работы в качестве мини-вкладок в пользовательском интерфейсе, например, для переключения между диапазонами дат.</p>
+<h6 className="story storybook-docs-h6">{ButtonGroup.ButtonGroup.name}</h6>
+<Canvas of={ButtonGroup.ButtonGroup} />
+
+<h6 className="story storybook-docs-h6">{ButtonGroup.ButtonGroupWithIcons.name}</h6>
+<Canvas of={ButtonGroup.ButtonGroupWithIcons} />
+
+
+<style>{styles}</style>

@@ -1,4 +1,4 @@
-import BasicButton from '../components/ui/Button.vue'
+import BasicButton from '../components/ui/ButtonBasic.vue'
 import { ArrowLeftIcon, ArrowRightIcon, PlusIcon } from '@heroicons/vue/24/outline'
 
 export default {
@@ -22,7 +22,7 @@ export const ButtonGroup = {
       return { args, buttons }
     },
     template:
-      '<span class="isolate inline-flex rounded-md shadow-sm"><BasicButton v-for="(button, index) in buttons" v-bind="args" :label="button.label" :shape="button.shape" :variant="button.variant" :group-index="index" :total-items="buttons.length" :key="button.label" /></span>'
+      '<span class="isolate inline-flex rounded-md shadow-sm"><BasicButton v-for="(button, index) in buttons" v-bind="args" :shape="button.shape" :variant="button.variant" :group-index="index" :total-items="buttons.length" :key="button.label"><template #label>{{button.label}}</template></BasicButton></span>'
   })
 }
 
@@ -54,6 +54,6 @@ export const ButtonGroupWithIcons = {
       return { args, buttons }
     },
     template:
-      '<span class="isolate inline-flex rounded-md shadow-sm"><BasicButton v-for="(button, index) in buttons" v-bind="args" :title="button.title" :left-icon="button.leftIcon" :shape="button.shape" :variant="button.variant" :group-index="index" :total-items="buttons.length" :key="button.title" /></span>'
+      '<span class="isolate inline-flex rounded-md shadow-sm"><BasicButton v-for="(button, index) in buttons" v-bind="args" :title="button.title" :shape="button.shape" :variant="button.variant" :group-index="index" :total-items="buttons.length" :key="button.title"><template #leftIcon><component :is="button.leftIcon" /></template></BasicButton></span>'
   })
 }

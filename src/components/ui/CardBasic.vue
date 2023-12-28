@@ -7,10 +7,16 @@ const variants = {
 }
 
 export default {
-  // eslint-disable-next-line vue/multi-word-component-names
-  name: 'Card',
+  name: 'Card-Basic',
 
   props: {
+    /** Варианты:
+     *
+     * default - по-умолчанию
+     *
+     * gray - серая, без бордюра
+     *
+     * */
     variant: {
       type: String,
       array: Object.keys(variants),
@@ -19,6 +25,8 @@ export default {
       },
       default: Object.keys(variants)[0]
     },
+    /** Дополнительный класс.
+     */
     className: {
       type: String,
       required: false,
@@ -37,7 +45,7 @@ export default {
       classes: computed(() => ({
         'rounded-lg': true,
         [variants[props.variant]]: true,
-        [props.className]: true,
+        [props.className]: true
       }))
     }
   }
@@ -46,6 +54,6 @@ export default {
 
 <template>
   <div :class="classes">
-    {{ children }}
+    <slot name="children"></slot>
   </div>
 </template>

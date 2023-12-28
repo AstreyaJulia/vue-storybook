@@ -2,8 +2,7 @@
 import { computed, reactive } from 'vue'
 
 export default {
-  // eslint-disable-next-line vue/multi-word-component-names
-  name: 'Placeholder',
+  name: 'Card-Footer',
 
   props: {
     className: {
@@ -22,7 +21,7 @@ export default {
 
     return {
       classes: computed(() => ({
-        'rounded-md border-2 border-dashed border-gray-200': true,
+        'border-t border-gray-200 bg-gray-100 p-5 text-sm text-gray-500': true,
         [props.className]: true
       }))
     }
@@ -31,7 +30,5 @@ export default {
 </script>
 
 <template>
-  <div :class="classes">
-    {{ children }}
-  </div>
+  <footer :class="classes"><slot name="children"></slot></footer>
 </template>

@@ -19,11 +19,11 @@ const shapes = {
 
 const variants = {
   default:
-      'shadow-sm border border-gray-300 bg-white text-gray-800 fill-gray-800 hover:text-gray-900 hover:fill-gray-900 hover:bg-gray-50 hover:border-gray-400 focus:ring-4 focus:ring-gray-300/50 disabled:bg-gray-50 disabled:hover:bg-gray-50 disabled:border-gray-100 disabled:hover:border-gray-100 disabled:text-gray-300 disabled:fill-gray-300',
+    'shadow-sm border border-gray-300 hover:border-gray-400 bg-gray-50 hover:bg-gray-100 text-gray-800 fill-gray-800 hover:text-gray-900 hover:fill-gray-900 focus:ring-4 focus:ring-gray-300/50 disabled:bg-gray-50 disabled:hover:bg-gray-50 disabled:border-gray-100 disabled:hover:border-gray-100 disabled:text-gray-300 disabled:fill-gray-300',
   primary:
-    'shadow-sm border border-brand-700 bg-brand-600 text-white fill-white hover:bg-brand-700 hover:border-brand-800 focus:ring-4 focus:ring-brand-300/50 disabled:bg-brand-200 disabled:border-brand-300 disabled:hover:bg-brand-200 disabled:text-gray-100 disabled:fill-gray-100',
+    'shadow-sm border border-brand-600 bg-brand-600 text-white fill-white hover:bg-brand-700 hover:border-brand-700 focus:ring-4 focus:ring-brand-300/50 disabled:bg-brand-200 disabled:border-brand-200 disabled:hover:bg-brand-200 disabled:text-gray-100 disabled:fill-gray-100',
   destructive:
-    'shadow-sm border border-error-400 bg-error-100 text-error-700 fill-error-700 hover:bg-error-200 hover:border-error-500 focus:ring-4 focus:ring-error-300/50 disabled:bg-error-50 disabled:hover:bg-error-50 disabled:border-error-100 disabled:hover:border-error-100 disabled:text-error-300 disabled:fill-error-300',
+    'shadow-sm border border-error-400 hover:border-error-500 bg-error-100 hover:bg-error-200 text-error-700 fill-error-700 focus:ring-4 focus:ring-error-300/50 disabled:bg-error-50 disabled:hover:bg-error-50 disabled:border-error-100 disabled:hover:border-error-100 disabled:text-error-300 disabled:fill-error-300',
   tertiary:
     'bg-transparent border border-transparent text-gray-600 fill-gray-600 hover:text-gray-800 hover:fill-gray-800 focus:ring-4 focus:ring-gray-300/50 disabled:text-gray-200 disabled:fill-gray-200 disabled:text-gray-300 disabled:fill-gray-300',
   link: 'bg-transparent border border-transparent text-brand-600 fill-brand-600 hover:text-brand-800 hover:fill-brand-800 focus:ring-4 focus:ring-brand-300/50 disabled:text-brand-200 disabled:fill-brand-200 disabled:text-brand-300 disabled:fill-brand-300'
@@ -49,18 +49,36 @@ const loaderFill = {
 }
 
 export default {
-  name: 'Basic-Button',
+  name: 'Button-Basic',
 
-  props: {
+  slots: {
+    /** Текст на кнопке.
+     */
     label: {
       type: String,
       required: false,
       default: ''
     },
+    /** Дополнительные элементы.
+     */
+    children: {
+      type: Node,
+      required: false
+    }
+  },
+
+  props: {
+    /** Состояние загрузки */
     isLoading: {
       type: Boolean,
       default: false
     },
+    /** Размер кнопки.
+     *
+     * default - стандартный. По-умолчанию.
+     *
+     * small - маленький.
+     */
     size: {
       type: String,
       array: Object.keys(sizes),
@@ -69,6 +87,18 @@ export default {
       },
       default: Object.keys(sizes)[0]
     },
+    /** Вариант кнопки.
+     *
+     * default - стандартная кнопка. По-умолчанию.
+     *
+     * primary - основная кнопка. Только 1 на экране.
+     *
+     * tertiary - кнопка 3-го уровня
+     *
+     * link - кнопка в виде ссылки. Переход на другие страницы.
+     *
+     * destructive - обозначает деструктивное действие - удаление и т.д.
+     */
     variant: {
       type: String,
       array: Object.keys(variants),
@@ -77,6 +107,12 @@ export default {
       },
       default: Object.keys(variants)[0]
     },
+    /** Форма кнопки.
+     *
+     * default - удлиненная, для текста, текст + значок. По-умолчанию.
+     *
+     * square - квадратная. Отступ внутри одинаковый по 4 сторонам. Для кнопок со значком, без текста.
+     */
     shape: {
       type: String,
       array: Object.keys(shapes.default),
@@ -85,28 +121,37 @@ export default {
       },
       default: Object.keys(shapes.default)[0]
     },
+    /** Значок слева от текста.
+     * svg, png и т.д.
+     */
     leftIcon: {
       type: Node,
       required: false
     },
+    /** Значок справа от текста.
+     * svg, png и т.д.
+     */
     rightIcon: {
       type: Node,
       required: false
     },
+    /** Дополнительный класс.
+     */
     className: {
       type: String,
       required: false,
       default: ''
     },
-    children: {
-      type: Node,
-      required: false
-    },
+
+    /** Индекс текущего элемента в группе кнопок.
+     */
     groupIndex: {
       type: Number,
       required: false,
       default: -1
     },
+    /** Кол-во элементов в группе кнопок.
+     */
     totalItems: {
       type: Number,
       required: false,
@@ -166,8 +211,8 @@ export default {
     @click="onClick"
   >
     <span class="relative flex items-center gap-2">
-      <span :class="leftIconClasses" v-if="leftIcon">
-        <component :is="leftIcon" aria-hidden="true" />
+      <span :class="leftIconClasses" v-if="$slots.leftIcon">
+        <slot name="leftIcon"></slot>
       </span>
       <svg
         viewBox="0 0 44 44"
@@ -182,13 +227,11 @@ export default {
           :class="loaderSpinnerClasses"
         />
       </svg>
-      {{ label }}
-      <span :class="rightIconClasses" v-if="rightIcon">
-        <component :is="rightIcon" aria-hidden="true" />
+      <slot name="label"></slot>
+      <span :class="rightIconClasses" v-if="$slots.rightIcon">
+        <slot name="rightIcon"></slot>
       </span>
     </span>
-    {{ children }}
+    <slot name="children"></slot>
   </button>
 </template>
-
-<style scoped></style>

@@ -1,0 +1,82 @@
+import { Meta } from "@storybook/blocks";
+import { styles } from "../styles/mdxStorybookStyes";
+import storybook0005 from '../assets/images/storybook0005.jpg'
+
+<Meta title="Тени и размытие фона" />
+
+ <h1 className="story storybook-docs-h1">Тени и размытие фона</h1>
+
+<h2 className="story storybook-docs-h2">Тени</h2>
+ <p className="story storybook-text">Тени позволяют добавить глубины и реализма дизайнам, располагая элементы по оси Z.</p>
+
+<div className="pt-16">
+  <h3 className="story storybook-docs-h3">Падающая тень (box shadow)</h3>
+  <div className="flex items-center gap-7 flex-wrap">
+    <div className="flex flex-col gap-5">
+      <span className="w-28 h-28 rounded-lg shadow-sm bg-white"/>
+      <p className="story storybook-caption2">shadow-sm</p>
+    </div>
+    <div className="flex flex-col gap-5">
+      <span className="w-28 h-28 rounded-lg shadow bg-white"/>
+      <p className="story storybook-caption2">shadow</p>
+    </div>
+    <div className="flex flex-col gap-5">
+      <span className="w-28 h-28 rounded-lg shadow-md bg-white"/>
+      <p className="story storybook-caption2">shadow-md</p>
+    </div>
+    <div className="flex flex-col gap-5">
+      <span className="w-28 h-28 rounded-lg shadow-lg bg-white"/>
+      <p className="story storybook-caption2">shadow-lg</p>
+    </div>
+    <div className="flex flex-col gap-5">
+      <span className="w-28 h-28 rounded-lg shadow-xl bg-white"/>
+      <p className="story storybook-caption2">shadow-xl</p>
+    </div>
+  </div>
+</div>
+<div className="pt-16">
+  <h3 className="story storybook-docs-h3">Внутренняя тень (box shadow inner)</h3>
+  <div className="flex items-center gap-7 flex-wrap">
+    <div className="flex flex-col gap-5">
+      <span className="w-28 h-28 rounded-lg shadow-inner bg-white"/>
+      <p className="story storybook-caption2">shadow-inner</p>
+    </div>
+  </div>
+</div>
+
+<h2 className="story storybook-docs-h2">Размытие фона</h2>
+ <p className="story storybook-text">Размытие фона часто стилистически используется в современном дизайне пользовательского интерфейса. Однако, как и тени, они позволяют добавлять глубину и реалистичность дизайну, располагая элементы по оси Z.</p>
+<div className="pt-16">
+  <div className="flex items-center gap-7 flex-wrap">
+    <div className="flex flex-col gap-5">
+      <img src={storybook0005} alt="Изображение" className="w-28 h-28 rounded-lg blur-sm bg-white"/>
+      <p className="story storybook-caption2">blur-sm</p>
+    </div>
+    <div className="flex flex-col gap-5">
+      <img src={storybook0005} alt="Изображение" className="w-28 h-28 rounded-lg blur bg-white"/>
+      <p className="story storybook-caption2">blur</p>
+    </div>
+    <div className="flex flex-col gap-5">
+      <img src={storybook0005} alt="Изображение" className="w-28 h-28 rounded-lg blur-md bg-white"/>
+      <p className="story storybook-caption2">blur-md</p>
+    </div>
+    <div className="flex flex-col gap-5">
+      <img src={storybook0005} alt="Изображение" className="w-28 h-28 rounded-lg blur-lg bg-white"/>
+      <p className="story storybook-caption2">blur-lg</p>
+    </div>
+    <div className="flex flex-col gap-5">
+      <img src={storybook0005} alt="Изображение" className="w-28 h-28 rounded-lg blur-xl bg-white"/>
+      <p className="story storybook-caption2">blur-xl</p>
+    </div>
+    <div className="flex flex-col gap-5">
+      <img src={storybook0005} alt="Изображение" className="w-28 h-28 rounded-lg blur-2xl bg-white"/>
+      <p className="story storybook-caption2">blur-2xl</p>
+    </div>
+    <div className="flex flex-col gap-5">
+      <img src={storybook0005} alt="Изображение" className="w-28 h-28 rounded-lg blur-3xl bg-white"/>
+      <p className="story storybook-caption2">blur-3xl</p>
+    </div>
+  </div>
+</div>
+
+<style>{styles}</style>

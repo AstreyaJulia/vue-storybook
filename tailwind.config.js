@@ -6,11 +6,13 @@ module.exports = {
   content: [
     "./index.html",
     "./src/**/*.{vue,js,ts,jsx,tsx}",
+    "./src/stories/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   darkMode: "class",
   theme: {
     fontFamily: {
-      sans: ["Inter", ...defaultTheme.fontFamily.sans],
+      sans: ["Open Sans", ...defaultTheme.fontFamily.sans],
+      serif: ["Noto Serif", ...defaultTheme.fontFamily.serif],
     },
     extend: {
       colors: ({ colors }) => ({

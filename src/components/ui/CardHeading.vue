@@ -21,7 +21,7 @@ export default {
 
     return {
       classes: computed(() => ({
-        'border-b border-gray-200 p-5': true,
+        'border-b border-gray-200 p-4': true,
         [props.className]: true
       }))
     }

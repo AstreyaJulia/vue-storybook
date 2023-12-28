@@ -1,5 +1,6 @@
-/** Шрифт Inter */
-@import '../../public/fonts/inter/index.css';
+/** Шрифты */
+@import '../../public/fonts/opensans/index.css';
+@import '../../public/fonts/notoserif/index.css';
 
 @tailwind base;
 @tailwind components;

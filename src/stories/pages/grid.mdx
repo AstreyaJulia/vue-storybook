@@ -1,0 +1,809 @@
+import { Meta } from "@storybook/blocks";
+import { styles } from "../styles/mdxStorybookStyes";
+import storybook0018 from '../assets/images/storybook0018.jpg'
+import storybook0019 from '../assets/images/storybook0019.jpg'
+import storybook0020 from '../assets/images/storybook0020.jpg'
+import storybook0021 from '../assets/images/storybook0021.jpg'
+
+<Meta title="Сетки и отступы" />
+
+<h1 className="story storybook-docs-h1">Сетка</h1>
+<p className="story storybook-text">Сетки макета определяют структуру, иерархию и ритм вашего дизайна. Использование
+  определенной системы макетов позволяет вам работать быстрее и более последовательно, избавляя вас от догадок при
+  создании адаптивного дизайна.</p>
+
+<div className="pt-10">
+  <h2 className="story storybook-docs-h2">Desktop. 1280px.</h2>
+  <p className="story storybook-text">12 колонок. Промежуток 32px, внутренние отступы справа и слева - 32px. Ширина
+    внутреннего содержимого - 1216px.</p>
+  <div
+    className="columns-4 md:columns-6 xl:columns-12 gap-4 md:gap-8 h-96 px-4 md:px-8 border border-gray-300 rounded-lg max-w-screen-xl">
+    <div className="bg-rose-100 w-full h-full" />
+    <div className="bg-rose-100 w-full h-full" />
+    <div className="bg-rose-100 w-full h-full" />
+    <div className="bg-rose-100 w-full h-full" />
+    <div className="bg-rose-100 w-full h-full" />
+    <div className="bg-rose-100 w-full h-full" />
+    <div className="bg-rose-100 w-full h-full" />
+    <div className="bg-rose-100 w-full h-full" />
+    <div className="bg-rose-100 w-full h-full" />
+    <div className="bg-rose-100 w-full h-full" />
+    <div className="bg-rose-100 w-full h-full" />
+    <div className="bg-rose-100 w-full h-full" />
+  </div>
+
+</div>
+
+<div className="pt-10">
+  <h2 className="story storybook-docs-h2">Tablet. 768px.</h2>
+  <p className="story storybook-text">6 колонок. Промежуток 32px, внутренние отступы справа и слева - 32px. Ширина внутреннего
+    содержимого - 704px.</p>
+  <div
+    className="columns-4 md:columns-6 gap-4 md:gap-8 h-96 px-4 md:px-8 border border-gray-300 rounded-lg max-w-screen-md">
+    <div className="bg-rose-100 w-full h-full" />
+    <div className="bg-rose-100 w-full h-full" />
+    <div className="bg-rose-100 w-full h-full" />
+    <div className="bg-rose-100 w-full h-full" />
+    <div className="bg-rose-100 w-full h-full" />
+    <div className="bg-rose-100 w-full h-full" />
+  </div>
+</div>
+
+<div className="pt-10">
+  <h2 className="story storybook-docs-h2">Mobile. 375px.</h2>
+  <p className="story storybook-text">4 колонки. Промежуток 16px, внутренние отступы справа и слева - 16px. Ширина внутреннего
+    содержимого - 343px.</p>
+  <div className="columns-4 gap-4 h-96 px-4 border border-gray-300 rounded-lg max-w-[375px]">
+    <div className="bg-rose-100 w-full h-full" />
+    <div className="bg-rose-100 w-full h-full" />
+    <div className="bg-rose-100 w-full h-full" />
+    <div className="bg-rose-100 w-full h-full" />
+  </div>
+</div>
+
+<h1 className="story storybook-docs-h1">Отступы</h1>
+<p className="story storybook-text">Как и в случае с цветовой шкалой, работа с определенной системой интервалов позволяет вам
+  работать быстрее и более последовательно. Последовательное и масштабируемое расстояние поможет вам избежать догадок во
+  время проектирования и разработки, поскольку вы проектируете с ограниченным набором опций.</p>
+
+<div className="pt-10">
+  <h2 className="story storybook-docs-h2">Направляющие системы интервалов</h2>
+
+  <table className="table">
+    <thead className="table-header-group">
+    <tr className="table-row">
+      <th className="table-cell text-left">
+        Название
+      </th>
+      <th className="table-cell text-left">
+        Размер (16px основа)
+      </th>
+      <th className="table-cell text-left">
+        Пикселей
+      </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr className="table-row">
+      <td className="table-cell">
+        0.5
+      </td>
+      <td className="table-cell">
+        0.125rem
+      </td>
+      <td className="table-cell">
+        2
+        <span className="h-6 w-0.5 flex items-center text-xs bg-brand-100 text-brand-700 ml-5 relative">
+          <span className="absolute inset-x-0 inset-y-1/3">2px</span>
+        </span>
+      </td>
+    </tr>
+    <tr className="table-row">
+      <td className="table-cell">
+        1
+      </td>
+      <td className="table-cell">
+        0.25rem
+      </td>
+      <td className="table-cell">
+        4
+        <span className="h-6 w-1 flex items-center text-xs bg-brand-100 text-brand-700 ml-5 relative">
+          <span className="absolute inset-x-0 inset-y-1/3">4px</span>
+        </span>
+      </td>
+    </tr>
+    <tr className="table-row">
+      <td className="table-cell">
+        1.5
+      </td>
+      <td className="table-cell">
+        0.375rem
+      </td>
+      <td className="table-cell">
+        6
+        <span className="h-6 w-1.5 flex items-center text-xs bg-brand-100 text-brand-700 ml-5 relative">
+          <span className="absolute inset-x-0 inset-y-1/3">6px</span>
+        </span>
+      </td>
+    </tr>
+    <tr className="table-row">
+      <td className="table-cell">
+        2
+      </td>
+      <td className="table-cell">
+        0.5rem
+      </td>
+      <td className="table-cell">
+        8
+        <span className="h-6 w-2 flex items-center text-xs bg-brand-100 text-brand-700 ml-5 relative">
+          <span className="absolute inset-x-0 inset-y-1/3">8px</span>
+        </span>
+      </td>
+    </tr>
+    <tr className="table-row">
+      <td className="table-cell">
+        2.5
+      </td>
+      <td className="table-cell">
+        0.625rem
+      </td>
+      <td className="table-cell">
+        10
+        <span className="h-6 w-2.5 flex items-center text-xs bg-brand-100 text-brand-700 ml-5 relative">
+          <span className="absolute inset-x-0 inset-y-1/3">10px</span>
+        </span>
+      </td>
+    </tr>
+    <tr className="table-row">
+      <td className="table-cell">
+        3
+      </td>
+      <td className="table-cell">
+        0.75rem
+      </td>
+      <td className="table-cell">
+        12
+        <span className="h-6 w-3 flex items-center text-xs bg-brand-100 text-brand-700 ml-5 relative">
+          <span className="absolute inset-x-0 inset-y-1/3">12px</span>
+        </span>
+      </td>
+    </tr>
+    <tr className="table-row">
+      <td className="table-cell">
+        3.5
+      </td>
+      <td className="table-cell">
+        0.875rem
+      </td>
+      <td className="table-cell">
+        14
+        <span className="h-6 w-3.5 flex items-center text-xs bg-brand-100 text-brand-700 ml-5 relative">
+          <span className="absolute inset-x-0 inset-y-1/3">14px</span>
+        </span>
+      </td>
+    </tr>
+    <tr className="table-row">
+      <td className="table-cell">
+        4
+      </td>
+      <td className="table-cell">
+        1rem
+      </td>
+      <td className="table-cell">
+        16
+        <span className="h-6 w-4 flex items-center text-xs bg-brand-100 text-brand-700 ml-5 relative">
+          <span className="absolute inset-x-0 inset-y-1/3">16px</span>
+        </span>
+      </td>
+    </tr>
+    <tr className="table-row">
+      <td className="table-cell">
+        5
+      </td>
+      <td className="table-cell">
+        1.25rem
+      </td>
+      <td className="table-cell">
+        20
+        <span className="h-6 w-5 flex items-center text-xs bg-brand-100 text-brand-700 ml-5 relative">
+          <span className="absolute inset-x-0 inset-y-1/3">20px</span>
+        </span>
+      </td>
+    </tr>
+    <tr className="table-row">
+      <td className="table-cell">
+        6
+      </td>
+      <td className="table-cell">
+        1.5rem
+      </td>
+      <td className="table-cell">
+        24
+        <span className="h-6 w-6 flex items-center text-xs bg-brand-100 text-brand-700 ml-5 relative">
+          <span className="absolute inset-x-0 inset-y-1/3">24px</span>
+        </span>
+      </td>
+    </tr>
+    <tr className="table-row">
+      <td className="table-cell">
+        7
+      </td>
+      <td className="table-cell">
+        1.75rem
+      </td>
+      <td className="table-cell">
+        28
+        <span className="h-6 w-7 flex items-center text-xs bg-brand-100 text-brand-700 ml-5 relative">
+          <span className="absolute inset-x-0 inset-y-1/3">28px</span>
+        </span>
+      </td>
+    </tr>
+    <tr className="table-row">
+      <td className="table-cell">
+        8
+      </td>
+      <td className="table-cell">
+        2rem
+      </td>
+      <td className="table-cell">
+        32
+        <span className="h-6 w-8 flex items-center text-xs bg-brand-100 text-brand-700 ml-5 relative">
+          <span className="absolute inset-x-0 inset-y-1/3">32px</span>
+        </span>
+      </td>
+    </tr>
+    <tr className="table-row">
+      <td className="table-cell">
+        9
+      </td>
+      <td className="table-cell">
+        2.25rem
+      </td>
+      <td className="table-cell">
+        36
+        <span className="h-6 w-9 flex items-center text-xs bg-brand-100 text-brand-700 ml-5 relative">
+          <span className="absolute inset-x-0 inset-y-1/3">36px</span>
+        </span>
+      </td>
+    </tr>
+    <tr className="table-row">
+      <td className="table-cell">
+        10
+      </td>
+      <td className="table-cell">
+        2.5rem
+      </td>
+      <td className="table-cell">
+        40
+        <span className="h-6 w-10 flex items-center text-xs bg-brand-100 text-brand-700 ml-5 relative">
+          <span className="absolute inset-x-0 inset-y-1/3">40px</span>
+        </span>
+      </td>
+    </tr>
+    <tr className="table-row">
+      <td className="table-cell">
+        11
+      </td>
+      <td className="table-cell">
+        2.75rem
+      </td>
+      <td className="table-cell">
+        44
+        <span className="h-6 w-11 flex items-center text-xs bg-brand-100 text-brand-700 ml-5 relative">
+          <span className="absolute inset-x-0 inset-y-1/3">44px</span>
+        </span>
+      </td>
+    </tr>
+    <tr className="table-row">
+      <td className="table-cell">
+        12
+      </td>
+      <td className="table-cell">
+        3rem
+      </td>
+      <td className="table-cell">
+        48
+        <span className="h-6 w-12 flex items-center text-xs bg-brand-100 text-brand-700 ml-5 relative">
+          <span className="absolute inset-x-0 inset-y-1/3">48px</span>
+        </span>
+      </td>
+    </tr>
+    <tr className="table-row">
+      <td className="table-cell">
+        14
+      </td>
+      <td className="table-cell">
+        3.5rem
+      </td>
+      <td className="table-cell">
+        56
+        <span className="h-6 w-14 flex items-center text-xs bg-brand-100 text-brand-700 ml-5 relative">
+          <span className="absolute inset-x-0 inset-y-1/3">56px</span>
+        </span>
+      </td>
+    </tr>
+    <tr className="table-row">
+      <td className="table-cell">
+        16
+      </td>
+      <td className="table-cell">
+        4rem
+      </td>
+      <td className="table-cell">
+        64
+        <span className="h-6 w-16 flex items-center text-xs bg-brand-100 text-brand-700 ml-5 relative">
+          <span className="absolute inset-x-0 inset-y-1/3">64px</span>
+        </span>
+      </td>
+    </tr>
+    <tr className="table-row">
+      <td className="table-cell">
+        20
+      </td>
+      <td className="table-cell">
+        5rem
+      </td>
+      <td className="table-cell">
+        80
+        <span className="h-6 w-20 flex items-center text-xs bg-brand-100 text-brand-700 ml-5 relative">
+          <span className="absolute inset-x-0 inset-y-1/3">80px</span>
+        </span>
+      </td>
+    </tr>
+    <tr className="table-row">
+      <td className="table-cell">
+        24
+      </td>
+      <td className="table-cell">
+        6rem
+      </td>
+      <td className="table-cell">
+        96
+        <span className="h-6 w-24 flex items-center text-xs bg-brand-100 text-brand-700 ml-5 relative">
+          <span className="absolute inset-x-0 inset-y-1/3">96px</span>
+        </span>
+      </td>
+    </tr>
+    <tr className="table-row">
+      <td className="table-cell">
+        28
+      </td>
+      <td className="table-cell">
+        7rem
+      </td>
+      <td className="table-cell">
+        112
+        <span className="h-6 w-28 flex items-center text-xs bg-brand-100 text-brand-700 ml-5 relative">
+          <span className="absolute inset-x-0 inset-y-1/3">112px</span>
+        </span>
+      </td>
+    </tr>
+    <tr className="table-row">
+      <td className="table-cell">
+        32
+      </td>
+      <td className="table-cell">
+        8rem
+      </td>
+      <td className="table-cell">
+        128
+        <span className="h-6 w-32 flex items-center text-xs bg-brand-100 text-brand-700 ml-5 relative">
+          <span className="absolute inset-x-0 inset-y-1/3">128px</span>
+        </span>
+      </td>
+    </tr>
+    <tr className="table-row">
+      <td className="table-cell">
+        36
+      </td>
+      <td className="table-cell">
+        9rem
+      </td>
+      <td className="table-cell">
+        144
+        <span className="h-6 w-36 flex items-center text-xs bg-brand-100 text-brand-700 ml-5 relative">
+          <span className="absolute inset-x-0 inset-y-1/3">144px</span>
+        </span>
+      </td>
+    </tr>
+    <tr className="table-row">
+      <td className="table-cell">
+        40
+      </td>
+      <td className="table-cell">
+        10rem
+      </td>
+      <td className="table-cell">
+        160
+        <span className="h-6 w-40 flex items-center text-xs bg-brand-100 text-brand-700 ml-5 relative">
+          <span className="absolute inset-x-0 inset-y-1/3">160px</span>
+        </span>
+      </td>
+    </tr>
+    <tr className="table-row">
+      <td className="table-cell">
+        44
+      </td>
+      <td className="table-cell">
+        11rem
+      </td>
+      <td className="table-cell">
+        176
+        <span className="h-6 w-44 flex items-center text-xs bg-brand-100 text-brand-700 ml-5 relative">
+          <span className="absolute inset-x-0 inset-y-1/3">176px</span>
+        </span>
+      </td>
+    </tr>
+    <tr className="table-row">
+      <td className="table-cell">
+        48
+      </td>
+      <td className="table-cell">
+        12rem
+      </td>
+      <td className="table-cell">
+        192
+        <span className="h-6 w-48 flex items-center text-xs bg-brand-100 text-brand-700 ml-5 relative">
+          <span className="absolute inset-x-0 inset-y-1/3">192px</span>
+        </span>
+      </td>
+    </tr>
+    <tr className="table-row">
+      <td className="table-cell">
+        52
+      </td>
+      <td className="table-cell">
+        13rem
+      </td>
+      <td className="table-cell">
+        208
+        <span className="h-6 w-52 flex items-center text-xs bg-brand-100 text-brand-700 ml-5 relative">
+          <span className="absolute inset-x-0 inset-y-1/3">208px</span>
+        </span>
+      </td>
+    </tr>
+    <tr className="table-row">
+      <td className="table-cell">
+        56
+      </td>
+      <td className="table-cell">
+        14rem
+      </td>
+      <td className="table-cell">
+        224
+        <span className="h-6 w-56 flex items-center text-xs bg-brand-100 text-brand-700 ml-5 relative">
+          <span className="absolute inset-x-0 inset-y-1/3">224px</span>
+        </span>
+      </td>
+    </tr>
+    <tr className="table-row">
+      <td className="table-cell">
+        60
+      </td>
+      <td className="table-cell">
+        15rem
+      </td>
+      <td className="table-cell">
+        240
+        <span className="h-6 w-60 flex items-center text-xs bg-brand-100 text-brand-700 ml-5 relative">
+          <span className="absolute inset-x-0 inset-y-1/3">240px</span>
+        </span>
+      </td>
+    </tr>
+    <tr className="table-row">
+      <td className="table-cell">
+        64
+      </td>
+      <td className="table-cell">
+        16rem
+      </td>
+      <td className="table-cell">
+        256
+        <span className="h-6 w-64 flex items-center text-xs bg-brand-100 text-brand-700 ml-5 relative">
+          <span className="absolute inset-x-0 inset-y-1/3">256px</span>
+        </span>
+      </td>
+    </tr>
+    <tr className="table-row">
+      <td className="table-cell">
+        72
+      </td>
+      <td className="table-cell">
+        18rem
+      </td>
+      <td className="table-cell">
+        288
+        <span className="h-6 w-72 flex items-center text-xs bg-brand-100 text-brand-700 ml-5 relative">
+          <span className="absolute inset-x-0 inset-y-1/3">288px</span>
+        </span>
+      </td>
+    </tr>
+    <tr className="table-row">
+      <td className="table-cell">
+        80
+      </td>
+      <td className="table-cell">
+        20rem
+      </td>
+      <td className="table-cell">
+        320
+        <span className="h-6 w-80 flex items-center text-xs bg-brand-100 text-brand-700 ml-5 relative">
+          <span className="absolute inset-x-0 inset-y-1/3">320px</span>
+        </span>
+      </td>
+    </tr>
+    <tr className="table-row">
+      <td className="table-cell">
+        96
+      </td>
+      <td className="table-cell">
+        20rem
+      </td>
+      <td className="table-cell">
+        384
+        <span className="h-6 w-96 flex items-center text-xs bg-brand-100 text-brand-700 ml-5 relative">
+          <span className="absolute inset-x-0 inset-y-1/3">384px</span>
+        </span>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+<div className="pt-10">
+  <h2 className="story storybook-docs-h2">Контейнеры</h2>
+
+  <table className="table">
+    <thead className="table-header-group">
+    <tr className="table-row">
+      <th className="table-cell text-left">
+        Название
+      </th>
+      <th className="table-cell text-left">
+        Размер (16px основа)
+      </th>
+      <th className="table-cell text-left">
+        Пикселей
+      </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr className="table-row">
+      <td className="table-cell">
+        max-w-2xl
+      </td>
+      <td className="table-cell">
+        42rem
+      </td>
+      <td className="table-cell">
+        672px
+        <span
+          className="h-6 max-w-2xl w-[672px] flex grow items-center text-xs bg-brand-100 text-brand-700 ml-5 relative">
+          <span className="absolute inset-x-0 inset-y-1/3">672px</span>
+        </span>
+      </td>
+    </tr>
+    <tr className="table-row">
+      <td className="table-cell">
+        max-w-3xl
+      </td>
+      <td className="table-cell">
+        48rem
+      </td>
+      <td className="table-cell">
+        768px
+        <span
+          className="h-6 max-w-3xl w-[768px] flex grow items-center text-xs bg-brand-100 text-brand-700 ml-5 relative">
+          <span className="absolute inset-x-0 inset-y-1/3">768px</span>
+        </span>
+      </td>
+    </tr>
+    <tr className="table-row">
+      <td className="table-cell">
+        max-w-5xl
+      </td>
+      <td className="table-cell">
+        64rem
+      </td>
+      <td className="table-cell">
+        1024px
+        <span
+          className="h-6 max-w-5xl w-[1024px] flex grow items-center text-xs bg-brand-100 text-brand-700 ml-5 relative">
+          <span className="absolute inset-x-0 inset-y-1/3">1024px</span>
+        </span>
+      </td>
+    </tr>
+    <tr className="table-row">
+      <td className="table-cell">
+        max-w-7xl
+      </td>
+      <td className="table-cell">
+        80rem
+      </td>
+      <td className="table-cell">
+        1280px
+        <span
+          className="h-6 max-w-7xl w-[1280px] flex grow items-center text-xs bg-brand-100 text-brand-700 ml-5 relative">
+          <span className="absolute inset-x-0 inset-y-1/3">1280px</span>
+        </span>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+<div className="pt-16">
+  <h2 className="story storybook-docs-h2">Зачем нужна система расстановки</h2>
+  <p className="story storybook-text">Как и в случае с цветовой шкалой, работа с определенной системой интервалов позволяет
+    вам работать быстрее и более последовательно. Последовательное и масштабируемое расстояние поможет вам избежать
+    догадок во время проектирования и разработки, поскольку вы проектируете с ограниченным набором опций.</p>
+  <p className="story storybook-text">Он также обеспечивает основу для гармоничного и последовательного расположения элементов
+    на экране, создавая знакомый ритм и порядок в ваших проектах.</p>
+</div>
+
+<div className="pt-16">
+  <h2 className="story storybook-docs-h2">Проектирование без определенной системы — это хаос</h2>
+  <p className="story storybook-text">Определение конкретной системы размещения может показаться ограничением, но на самом
+    деле оно устраняет усталость от принятия решений и позволяет вам работать быстрее и лучше проектировать. Без
+    определенной системы вы получите беспорядочные и непоследовательные проекты:</p>
+  <a href={storybook0018} className="story storybook-link" target='_blank' rel="noreferrer">
+    <img src={storybook0018} alt="Образец" className="w-2/3" />
+  </a>
+  <p className="story storybook-text">Существенным побочным эффектом такого проектирования является то, что практически
+    невозможно запомнить, какие значения и для чего следует использовать. Если что-то не так на стадии проектирования,
+    вероятность того, что разработчики сделают это правильно, равна 0%.</p>
+</div>
+
+<div className="pt-16">
+  <h2 className="story storybook-docs-h2">Начните с мягкой сетки размером 4 пикселя</h2>
+  <p className="story storybook-text">Самый простой способ создать простую систему интервалов — начать проектирование с учетом
+    подхода, основанного на сетке. Это не должно быть сложно.</p>
+  <p className="story storybook-text">Большинство современных систем пользовательского интерфейса и дизайна построены на
+    основе сеточной системы. Некоторые из этих систем выбирают подход «жесткой сетки», при котором элементы дизайна
+    помещаются в жесткую сетку размером 8 пикселей.</p>
+  <p className="story storybook-text">Мы всегда выбираем подход «мягкой сетки» размером 4 пикселя, который позволяет
+    использовать более тонкие параметры интервала, сохраняя при этом соответствие сетке 8 пикселей. Это означает, что
+    каждый элемент пробела делится на 4.</p>
+  <p className="story storybook-text">Если вы раньше не работали с сеткой, возможно, вам потребуется некоторое время, чтобы к
+    ней привыкнуть. Но как только вы начнете работать с сеткой или с определенной системой интервалов между
+    компонентами, вы увидите, что это помогает установить более гармоничный вертикальный ритм. Все работает лучше, когда
+    интервал увеличивается с шагом 4 пикселя:</p>
+  <a href={storybook0019} className="story storybook-link" target='_blank' rel="noreferrer">
+    <img src={storybook0019} alt="Образец" className="w-2/3" />
+  </a>
+  <p className="story storybook-text">Как только вы начнете работать с простой системой размером 4 пикселя, вам будет намного
+    проще обеспечить единообразие аналогичных компонентов и установить единый вертикальный ритм. Это позволяет вам
+    проектировать и работать быстрее, а разработчикам становится намного проще создавать ваши проекты.</p>
+  <p className="story storybook-text">Когда вы освоитесь с этим рабочим процессом, вам станет намного легче запоминать
+    последовательные и повторяющиеся узоры и вертикальные ритмы.</p>
+  <p className="story storybook-text">Вот пример аналогичного компонента с тем же интервалом:</p>
+  <a href={storybook0020} className="story storybook-link" target='_blank' rel="noreferrer">
+    <img src={storybook0020} alt="Образец" className="w-2/3" />
+  </a>
+</div>
+
+<div className="pt-16">
+  <h2 className="story storybook-docs-h2">Определение вашей системы интервалов</h2>
+  <p className="story storybook-text">Чтобы еще больше упростить задачу, еще больше ограничьте свои возможности и определите
+    ограниченный набор значений интервалов. Вместо произвольного выбора 124 пикселей и 128 пикселей, которые оба
+    попадают в сетку 4 пикселя, выберите заранее определенное значение 128 пикселей, которое вы сможете запомнить и
+    последовательно использовать в разных проектах.</p>
+  <p className="story storybook-text">Компоненты и интервалы в этой системе дизайна построены на основе набора
+    предопределенных значений интервалов в диапазоне от 4 до 256 пикселей:</p>
+
+  <div className="flex flex-col gap-5 py-7">
+    <span className="h-6 w-0.5 flex items-center text-xs bg-brand-100 text-brand-700 ml-5 relative">
+          <span className="absolute inset-x-0 inset-y-1/3">2px</span>
+        </span>
+    <span className="h-6 w-1 flex items-center text-xs bg-brand-100 text-brand-700 ml-5 relative">
+          <span className="absolute inset-x-0 inset-y-1/3">4px</span>
+        </span>
+    <span className="h-6 w-1.5 flex items-center text-xs bg-brand-100 text-brand-700 ml-5 relative">
+          <span className="absolute inset-x-0 inset-y-1/3">6px</span>
+        </span>
+    <span className="h-6 w-2 flex items-center text-xs bg-brand-100 text-brand-700 ml-5 relative">
+          <span className="absolute inset-x-0 inset-y-1/3">8px</span>
+        </span>
+    <span className="h-6 w-2.5 flex items-center text-xs bg-brand-100 text-brand-700 ml-5 relative">
+          <span className="absolute inset-x-0 inset-y-1/3">10px</span>
+        </span>
+    <span className="h-6 w-3 flex items-center text-xs bg-brand-100 text-brand-700 ml-5 relative">
+          <span className="absolute inset-x-0 inset-y-1/3">12px</span>
+        </span>
+    <span className="h-6 w-3.5 flex items-center text-xs bg-brand-100 text-brand-700 ml-5 relative">
+          <span className="absolute inset-x-0 inset-y-1/3">14px</span>
+        </span>
+    <span className="h-6 w-4 flex items-center text-xs bg-brand-100 text-brand-700 ml-5 relative">
+          <span className="absolute inset-x-0 inset-y-1/3">16px</span>
+        </span>
+    <span className="h-6 w-5 flex items-center text-xs bg-brand-100 text-brand-700 ml-5 relative">
+          <span className="absolute inset-x-0 inset-y-1/3">20px</span>
+        </span>
+    <span className="h-6 w-6 flex items-center text-xs bg-brand-100 text-brand-700 ml-5 relative">
+          <span className="absolute inset-x-0 inset-y-1/3">24px</span>
+        </span>
+    <span className="h-6 w-7 flex items-center text-xs bg-brand-100 text-brand-700 ml-5 relative">
+          <span className="absolute inset-x-0 inset-y-1/3">28px</span>
+        </span>
+    <span className="h-6 w-8 flex items-center text-xs bg-brand-100 text-brand-700 ml-5 relative">
+          <span className="absolute inset-x-0 inset-y-1/3">32px</span>
+        </span>
+    <span className="h-6 w-9 flex items-center text-xs bg-brand-100 text-brand-700 ml-5 relative">
+          <span className="absolute inset-x-0 inset-y-1/3">36px</span>
+        </span>
+    <span className="h-6 w-10 flex items-center text-xs bg-brand-100 text-brand-700 ml-5 relative">
+          <span className="absolute inset-x-0 inset-y-1/3">40px</span>
+        </span>
+    <span className="h-6 w-11 flex items-center text-xs bg-brand-100 text-brand-700 ml-5 relative">
+          <span className="absolute inset-x-0 inset-y-1/3">44px</span>
+        </span>
+    <span className="h-6 w-12 flex items-center text-xs bg-brand-100 text-brand-700 ml-5 relative">
+          <span className="absolute inset-x-0 inset-y-1/3">48px</span>
+        </span>
+    <span className="h-6 w-14 flex items-center text-xs bg-brand-100 text-brand-700 ml-5 relative">
+          <span className="absolute inset-x-0 inset-y-1/3">56px</span>
+        </span>
+    <span className="h-6 w-16 flex items-center text-xs bg-brand-100 text-brand-700 ml-5 relative">
+          <span className="absolute inset-x-0 inset-y-1/3">64px</span>
+        </span>
+    <span className="h-6 w-20 flex items-center text-xs bg-brand-100 text-brand-700 ml-5 relative">
+          <span className="absolute inset-x-0 inset-y-1/3">80px</span>
+        </span>
+    <span className="h-6 w-24 flex items-center text-xs bg-brand-100 text-brand-700 ml-5 relative">
+          <span className="absolute inset-x-0 inset-y-1/3">96px</span>
+        </span>
+    <span className="h-6 w-28 flex items-center text-xs bg-brand-100 text-brand-700 ml-5 relative">
+          <span className="absolute inset-x-0 inset-y-1/3">112px</span>
+        </span>
+    <span className="h-6 w-32 flex items-center text-xs bg-brand-100 text-brand-700 ml-5 relative">
+          <span className="absolute inset-x-0 inset-y-1/3">128px</span>
+        </span>
+    <span className="h-6 w-36 flex items-center text-xs bg-brand-100 text-brand-700 ml-5 relative">
+          <span className="absolute inset-x-0 inset-y-1/3">144px</span>
+        </span>
+    <span className="h-6 w-40 flex items-center text-xs bg-brand-100 text-brand-700 ml-5 relative">
+          <span className="absolute inset-x-0 inset-y-1/3">160px</span>
+        </span>
+    <span className="h-6 w-44 flex items-center text-xs bg-brand-100 text-brand-700 ml-5 relative">
+          <span className="absolute inset-x-0 inset-y-1/3">176px</span>
+        </span>
+    <span className="h-6 w-48 flex items-center text-xs bg-brand-100 text-brand-700 ml-5 relative">
+          <span className="absolute inset-x-0 inset-y-1/3">192px</span>
+        </span>
+    <span className="h-6 w-52 flex items-center text-xs bg-brand-100 text-brand-700 ml-5 relative">
+          <span className="absolute inset-x-0 inset-y-1/3">208px</span>
+        </span>
+    <span className="h-6 w-56 flex items-center text-xs bg-brand-100 text-brand-700 ml-5 relative">
+          <span className="absolute inset-x-0 inset-y-1/3">224px</span>
+        </span>
+    <span className="h-6 w-60 flex items-center text-xs bg-brand-100 text-brand-700 ml-5 relative">
+          <span className="absolute inset-x-0 inset-y-1/3">240px</span>
+        </span>
+    <span className="h-6 w-64 flex items-center text-xs bg-brand-100 text-brand-700 ml-5 relative">
+          <span className="absolute inset-x-0 inset-y-1/3">256px</span>
+        </span>
+    <span className="h-6 w-72 flex items-center text-xs bg-brand-100 text-brand-700 ml-5 relative">
+          <span className="absolute inset-x-0 inset-y-1/3">288px</span>
+        </span>
+    <span className="h-6 w-80 flex items-center text-xs bg-brand-100 text-brand-700 ml-5 relative">
+          <span className="absolute inset-x-0 inset-y-1/3">320px</span>
+        </span>
+    <span className="h-6 w-96 flex items-center text-xs bg-brand-100 text-brand-700 ml-5 relative">
+          <span className="absolute inset-x-0 inset-y-1/3">384px</span>
+        </span>
+
+  </div>
+  <p className="story storybook-text">Опять же, поначалу это может показаться излишним и произвольным, но ваши проекты и рабочий процесс увеличатся в 10 раз по скорости и последовательности, как только вы освоитесь. Благодаря ограниченному набору простых и запоминающихся значений интервалов для проектирования компоненты начинают выглядеть чище и более единообразными, независимо от того, что вы проектируете:</p>
+  <a href={storybook0021} className="story storybook-link" target='_blank' rel="noreferrer">
+    <img src={storybook0021} alt="Образец" className="w-2/3" />
+  </a>
+  <h3 className="story storybook-docs-h3">Лучшие практики</h3>
+  <ul>
+    <li>Старайтесь использовать значения, кратные 8 пикселям, при определении размеров, интервалов и позиционирования элементов.</li>
+    <li>При необходимости используйте 4 пикселя для более точной настройки.</li>
+    <li>По возможности следите за тем, чтобы объекты выстраивались в линию как по вертикали, так и по горизонтали.</li>
+    <li>Определите специальный набор значений интервалов и попробуйте использовать их во всех компонентах и макетах.</li>
+  </ul>
+</div>
+
+<style>{styles}</style>

@@ -1,5 +1,3 @@
-import colors from 'tailwindcss/colors'
-import themeConfig from '../../../configs/themeConfig'
 export const styles = `
 
 .story.storybook-text { /* Текст */
@@ -8,7 +6,7 @@ export const styles = `
   line-height: 1.5rem; /* 24px */
   font-style: normal;
   font-weight: 400;
-  color: ${colors[themeConfig.colors.main[0].color]['800']};
+  color: #1f2937;
   margin: 0 0 1.25rem;
 }
 
@@ -18,7 +16,7 @@ export const styles = `
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  color: ${colors[themeConfig.colors.main[0].color]['500']};
+  color: #6b7280;
   margin: 0;
 }
 
@@ -28,12 +26,12 @@ export const styles = `
   font-style: normal;
   font-weight: 700;
   letter-spacing: 0.01125rem;
-  color: ${colors[themeConfig.colors.main[0].color]['800']};
+  color: #1f2937;
   margin: 0;
 }
 
 .story.storybook-link { /* Ссылка */
-  color: ${colors[themeConfig.colors.main[1].color]['600']};
+  color: #4f46e5;
 }
 
 .story.storybook-link:hover { /* Ссылка */
@@ -47,7 +45,7 @@ export const styles = `
   font-style: normal;
   font-weight: 600;
   letter-spacing: 0.01125rem;
-  color: ${colors[themeConfig.colors.main[0].color]['800']};
+  color: #1f2937;
   margin: 1.75rem 0;
 }
 
@@ -58,7 +56,7 @@ export const styles = `
   font-style: normal;
   font-weight: 600;
   letter-spacing: 0.01125rem;
-  color: ${colors[themeConfig.colors.main[0].color]['800']};
+  color: #1f2937;
   margin: 1.5rem 0;
 }
 
@@ -69,7 +67,7 @@ export const styles = `
   font-style: normal;
   font-weight: 600;
   letter-spacing: 0.01125rem;
-  color: ${colors[themeConfig.colors.main[0].color]['800']};
+  color: #1f2937;
   margin: 1.25rem 0;
 }
 
@@ -80,7 +78,7 @@ export const styles = `
   font-style: normal;
   font-weight: 600;
   letter-spacing: 0.01125rem;
-  color: ${colors[themeConfig.colors.main[0].color]['800']};
+  color: #1f2937;
   margin: 1.125rem 0;
 }
 
@@ -91,13 +89,13 @@ export const styles = `
   font-style: normal;
   font-weight: 600;
   letter-spacing: 0.01125rem;
-  color: ${colors[themeConfig.colors.main[0].color]['800']};
+  color: #1f2937;
   margin: 1.375rem 0;
 }
 
 .story.storybook-docs-h6 { /* Заголовок образца истории */
   font-family: Inter, sans-serif;
-  color: ${colors[themeConfig.colors.main[0].color]['800']};
+  color: #1f2937;
   font-size: 1.125rem;
   font-style: normal;
   font-weight: 500;

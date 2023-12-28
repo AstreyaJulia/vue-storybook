@@ -21,7 +21,7 @@ export default {
 
     return {
       classes: computed(() => ({
-        'p-5': true,
+        'p-4': true,
         [props.className]: true
       }))
     }

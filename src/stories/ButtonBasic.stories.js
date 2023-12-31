@@ -1,6 +1,7 @@
 import ButtonBasic from '../components/ui/ButtonBasic.vue'
 import { ArrowPathIcon, TrashIcon } from '@heroicons/vue/24/outline'
 import { ArrowRightIcon } from '@heroicons/vue/20/solid'
+
 export default {
   title: 'Компоненты/Кнопки/Кнопка',
   component: ButtonBasic,
@@ -28,7 +29,13 @@ export default {
     }
   },
   parameters: {
-    layout: 'centered'
+    layout: 'centered',
+    slots: {
+      label: 'Текст на кнопке',
+      leftIcon: 'Значок слева от текста',
+      rightIcon: 'Значок справа от текста',
+      children: 'Дополнительные элементы'
+    }
   }
 }
 const Template = (args) => ({
@@ -36,7 +43,10 @@ const Template = (args) => ({
   setup() {
     return { args }
   },
-  template: '<ButtonBasic v-bind="args"><template #label>Действие</template></ButtonBasic>'
+  template: `
+      <ButtonBasic v-bind="args">
+        <template #label>Действие</template>
+      </ButtonBasic>`
 })
 
 export const _Button = Template.bind({})
@@ -49,7 +59,10 @@ export const Primary = {
     setup() {
       return { args }
     },
-    template: '<ButtonBasic v-bind="args"><template #label>Сохранить</template></ButtonBasic>'
+    template: `
+          <ButtonBasic v-bind="args">
+            <template #label>Сохранить</template>
+          </ButtonBasic>`
   }),
   args: {
     variant: 'primary',
@@ -64,7 +77,10 @@ export const PrimaryDisabled = {
     setup() {
       return { args }
     },
-    template: '<ButtonBasic v-bind="args"><template #label>Сохранить</template></ButtonBasic>'
+    template: `
+          <ButtonBasic v-bind="args">
+            <template #label>Сохранить</template>
+          </ButtonBasic>`
   }),
   args: {
     variant: 'primary',
@@ -80,7 +96,10 @@ export const PrimaryLoading = {
     setup() {
       return { args }
     },
-    template: '<ButtonBasic v-bind="args"><template #label>Сохранить</template></ButtonBasic>'
+    template: `
+          <ButtonBasic v-bind="args">
+            <template #label>Сохранить</template>
+          </ButtonBasic>`
   }),
   args: {
     variant: 'primary',
@@ -96,7 +115,10 @@ export const Default = {
     setup() {
       return { args }
     },
-    template: '<ButtonBasic v-bind="args"><template #label>Отмена</template></ButtonBasic>'
+    template: `
+          <ButtonBasic v-bind="args">
+            <template #label>Отмена</template>
+          </ButtonBasic>`
   }),
   args: {
     variant: 'default',
@@ -111,7 +133,10 @@ export const DefaultDisabled = {
     setup() {
       return { args }
     },
-    template: '<ButtonBasic v-bind="args"><template #label>Сохранить</template></ButtonBasic>'
+    template: `
+          <ButtonBasic v-bind="args">
+            <template #label>Сохранить</template>
+          </ButtonBasic>`
   }),
   args: {
     variant: 'default',
@@ -127,8 +152,13 @@ export const WithLeftIcon = {
     setup() {
       return { args }
     },
-    template:
-      '<ButtonBasic v-bind="args"><template #label>Обновить</template><template #leftIcon><ArrowPathIcon /></template></ButtonBasic>'
+    template: `
+          <ButtonBasic v-bind="args">
+            <template #label>Обновить</template>
+            <template #leftIcon>
+              <ArrowPathIcon/>
+            </template>
+          </ButtonBasic>`
   }),
   args: {
     variant: 'default',
@@ -143,8 +173,13 @@ export const WithLeftIconLoading = {
     setup() {
       return { args }
     },
-    template:
-      '<ButtonBasic v-bind="args"><template #label>Обновить</template><template #leftIcon><ArrowPathIcon /></template></ButtonBasic>'
+    template: `
+          <ButtonBasic v-bind="args">
+            <template #label>Обновить</template>
+            <template #leftIcon>
+              <ArrowPathIcon/>
+            </template>
+          </ButtonBasic>`
   }),
   args: {
     variant: 'default',
@@ -160,8 +195,13 @@ export const WithRightIcon = {
     setup() {
       return { args }
     },
-    template:
-      '<ButtonBasic v-bind="args"><template #label>Следующая</template><template #rightIcon><ArrowRightIcon /></template></ButtonBasic>'
+    template: `
+          <ButtonBasic v-bind="args">
+            <template #label>Следующая</template>
+            <template #rightIcon>
+              <ArrowRightIcon/>
+            </template>
+          </ButtonBasic>`
   }),
   args: {
     variant: 'default',
@@ -176,8 +216,12 @@ export const OnlyIcon = {
     setup() {
       return { args }
     },
-    template:
-      '<ButtonBasic v-bind="args"><template #rightIcon><TrashIcon /></template></ButtonBasic>'
+    template: `
+          <ButtonBasic v-bind="args">
+            <template #rightIcon>
+              <TrashIcon/>
+            </template>
+          </ButtonBasic>`
   }),
   args: {
     variant: 'default',
@@ -193,7 +237,10 @@ export const Destructive = {
     setup() {
       return { args }
     },
-    template: '<ButtonBasic v-bind="args"><template #label>Удалить</template></ButtonBasic>'
+    template: `
+          <ButtonBasic v-bind="args">
+            <template #label>Удалить</template>
+          </ButtonBasic>`
   }),
   args: {
     variant: 'destructive',
@@ -208,7 +255,10 @@ export const DestructiveLoading = {
     setup() {
       return { args }
     },
-    template: '<ButtonBasic v-bind="args"><template #label>Удалить</template></ButtonBasic>'
+    template: `
+          <ButtonBasic v-bind="args">
+            <template #label>Удалить</template>
+          </ButtonBasic>`
   }),
   args: {
     variant: 'destructive',
@@ -224,7 +274,10 @@ export const Tertiary = {
     setup() {
       return { args }
     },
-    template: '<ButtonBasic v-bind="args"><template #label>Перейти</template></ButtonBasic>'
+    template: `
+          <ButtonBasic v-bind="args">
+            <template #label>Перейти</template>
+          </ButtonBasic>`
   }),
   args: {
     variant: 'tertiary',
@@ -239,7 +292,10 @@ export const Link = {
     setup() {
       return { args }
     },
-    template: '<ButtonBasic v-bind="args"><template #label>Перейти</template></ButtonBasic>'
+    template: `
+          <ButtonBasic v-bind="args">
+            <template #label>Перейти</template>
+          </ButtonBasic>`
   }),
   args: {
     variant: 'link',

@@ -12,9 +12,9 @@ export default {
   props: {
     /** Варианты:
      *
-     * default - по-умолчанию
+     * `default` - по-умолчанию
      *
-     * gray - серая, без бордюра
+     * `gray` - серая, без бордюра
      *
      * */
     variant: {
@@ -25,13 +25,13 @@ export default {
       },
       default: Object.keys(variants)[0]
     },
-    /** Дополнительный класс.
-     */
+    /** Дополнительный класс. */
     className: {
       type: String,
       required: false,
       default: ''
     },
+    /** Дочерние элементы. */
     children: {
       type: Node,
       required: false

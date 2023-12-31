@@ -88,6 +88,7 @@ export default {
       },
       required: true
     },
+    /** Дополнительный класс. */
     className: {
       type: String,
       required: false,
@@ -103,6 +104,7 @@ export default {
       required: false,
       default: null
     },
+    /** Дополнительные дочерние элементы. */
     children: {
       type: Node,
       required: false

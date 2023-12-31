@@ -5,11 +5,13 @@ export default {
   name: 'Card-Heading',
 
   props: {
+    /** Дополнительный класс. */
     className: {
       type: String,
       required: false,
       default: ''
     },
+    /** Дополнительные дочерние элементы. */
     children: {
       type: Node,
       required: false

@@ -1,0 +1,61 @@
+import { Canvas, Controls, Meta, Source, Title } from "@storybook/blocks";
+import * as AvatarStories from "./AvatarBasic.stories.js";
+import { styles } from "./styles/mdxStorybookStyes";
+
+<Meta of={AvatarStories} />
+<Title>Аватар</Title>
+
+<p className="story storybook-text m-0">Все изображения взяты с Unsplash и могут свободно использоваться в коммерческих и некоммерческих целях.</p>
+
+<Canvas of={AvatarStories._Avatar} />
+<h6 className="story storybook-docs-h6">Параметры</h6>
+<Controls />
+
+<h6 className="story storybook-docs-h6">Код компонента</h6>
+<Source of={AvatarStories._Avatar} />
+
+<h3 className="story storybook-docs-h3 mb-5">Размеры аватаров</h3>
+<p className="story storybook-caption mb-5">{AvatarStories.AvatarSizes.name}</p>
+<Canvas of={AvatarStories.AvatarSizes} />
+
+<p className="story storybook-caption mb-5">{AvatarStories.AvatarLabelSizes.name}</p>
+<Canvas of={AvatarStories.AvatarLabelSizes} />
+
+<p className="story storybook-caption mb-5">{AvatarStories.AvatarIconSizes.name}</p>
+<p className="story storybook-text m-0">`text-color` и `fill-color` заданы по-умолчанию, как для текста. Рекомендуемые размеры значка указаны для каждого размера отдельно.</p>
+<Canvas of={AvatarStories.AvatarIconSizes} />
+
+<p className="story storybook-caption mb-5">{AvatarStories.AvatarProfile.name}</p>
+<Canvas of={AvatarStories.AvatarProfile} />
+
+<h3 className="story storybook-docs-h3 mb-5">Группа аватар/текст</h3>
+<p className="story storybook-caption mb-5">{AvatarStories.AvatarLabelGroup.storyName}</p>
+<Canvas of={AvatarStories.AvatarLabelGroup} />
+
+<p className="story storybook-caption mb-5">{AvatarStories.AvatarLabelGroup10.storyName}</p>
+<Canvas of={AvatarStories.AvatarLabelGroup10} />
+
+<p className="story storybook-caption mb-5">{AvatarStories.AvatarLabelGroup10.storyName}</p>
+<Canvas of={AvatarStories.AvatarLabelGroup12} />
+
+<p className="story storybook-caption mb-5">{AvatarStories.AvatarLabelGroup14.storyName}</p>
+<Canvas of={AvatarStories.AvatarLabelGroup14} />
+
+<p className="story storybook-caption mb-5">{AvatarStories.AvatarLabelGroupStatus.storyName}</p>
+<Canvas of={AvatarStories.AvatarLabelGroupStatus} />
+
+<p className="story storybook-caption mb-5">{AvatarStories.AvatarLabelGroupStatus10.storyName}</p>
+<Canvas of={AvatarStories.AvatarLabelGroupStatus10} />
+
+<p className="story storybook-caption mb-5">{AvatarStories.AvatarLabelGroupStatus12.storyName}</p>
+<Canvas of={AvatarStories.AvatarLabelGroupStatus12} />
+
+<p className="story storybook-caption mb-5">{AvatarStories.AvatarLabelGroupStatus14.storyName}</p>
+<Canvas of={AvatarStories.AvatarLabelGroupStatus14} />
+
+<p className="story storybook-caption mb-5">{AvatarStories.AvatarStatusIcon.storyName}</p>
+<Canvas of={AvatarStories.AvatarStatusIcon} />
+
+<p className="story storybook-caption mb-5">{AvatarStories.AvatarStatusIcon2.storyName}</p>
+<Canvas of={AvatarStories.AvatarStatusIcon2} />
+<style>{styles}</style>

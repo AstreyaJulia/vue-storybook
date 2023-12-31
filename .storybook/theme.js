@@ -15,7 +15,7 @@ export default create({
     appBorderRadius: 4,
 
     // Типографика
-    fontBase: `"Inter", ${defaultTheme.fontFamily.sans}`,
+    fontBase: `"Open Sans", ${defaultTheme.fontFamily.sans}`,
     fontCode: 'monospace',
 
     // Цвет текста

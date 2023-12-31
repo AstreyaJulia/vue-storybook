@@ -1,4 +1,5 @@
-import "../src/assets/main.css"
+import "../src/assets/styles/main.css"
+// Storybook Styles
 import "./styles.css"
 import theme from "./theme.js";
 

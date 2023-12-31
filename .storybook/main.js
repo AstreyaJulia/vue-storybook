@@ -2,6 +2,7 @@
 const config = {
   stories: ['../src/stories/**/*.mdx', '../src/stories/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
   addons: [
+    'storybook-addon-vue-slots',
     '@storybook/addon-links',
     '@storybook/addon-essentials',
     '@storybook/addon-interactions'

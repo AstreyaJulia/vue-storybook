@@ -51,33 +51,19 @@ const loaderFill = {
 export default {
   name: 'Button-Basic',
 
-  slots: {
-    /** Текст на кнопке.
-     */
-    label: {
-      type: String,
-      required: false,
-      default: ''
-    },
-    /** Дополнительные элементы.
-     */
-    children: {
-      type: Node,
-      required: false
-    }
-  },
+  slots: ['label', 'children', 'leftIcon', 'rightIcon'],
 
   props: {
-    /** Состояние загрузки */
+    /** **Состояние загрузки** */
     isLoading: {
       type: Boolean,
       default: false
     },
-    /** Размер кнопки.
+    /** **Размер кнопки**
      *
-     * default - стандартный. По-умолчанию.
+     * `default` - стандартный. По-умолчанию.
      *
-     * small - маленький.
+     * `small` - маленький.
      */
     size: {
       type: String,
@@ -87,17 +73,17 @@ export default {
       },
       default: Object.keys(sizes)[0]
     },
-    /** Вариант кнопки.
+    /** **Вариант кнопки**
      *
-     * default - стандартная кнопка. По-умолчанию.
+     * `default` - стандартная кнопка. По-умолчанию.
      *
-     * primary - основная кнопка. Только 1 на экране.
+     * `primary` - основная кнопка. Только 1 на экране.
      *
-     * tertiary - кнопка 3-го уровня
+     * `tertiary` - кнопка 3-го уровня
      *
-     * link - кнопка в виде ссылки. Переход на другие страницы.
+     * `link` - кнопка в виде ссылки. Переход на другие страницы.
      *
-     * destructive - обозначает деструктивное действие - удаление и т.д.
+     * `destructive` - обозначает деструктивное действие - удаление и т.д.
      */
     variant: {
       type: String,
@@ -107,11 +93,11 @@ export default {
       },
       default: Object.keys(variants)[0]
     },
-    /** Форма кнопки.
+    /** **Форма кнопки**
      *
-     * default - удлиненная, для текста, текст + значок. По-умолчанию.
+     * `default` - удлиненная, для текста, текст + значок. По-умолчанию.
      *
-     * square - квадратная. Отступ внутри одинаковый по 4 сторонам. Для кнопок со значком, без текста.
+     * `square` - квадратная. Отступ внутри одинаковый по 4 сторонам. Для кнопок со значком, без текста.
      */
     shape: {
       type: String,
@@ -121,37 +107,19 @@ export default {
       },
       default: Object.keys(shapes.default)[0]
     },
-    /** Значок слева от текста.
-     * svg, png и т.д.
-     */
-    leftIcon: {
-      type: Node,
-      required: false
-    },
-    /** Значок справа от текста.
-     * svg, png и т.д.
-     */
-    rightIcon: {
-      type: Node,
-      required: false
-    },
-    /** Дополнительный класс.
-     */
+    /** **Дополнительный класс** */
     className: {
       type: String,
       required: false,
       default: ''
     },
-
-    /** Индекс текущего элемента в группе кнопок.
-     */
+    /** **Индекс текущего элемента в группе кнопок** */
     groupIndex: {
       type: Number,
       required: false,
       default: -1
     },
-    /** Кол-во элементов в группе кнопок.
-     */
+    /** **Кол-во элементов в группе кнопок** */
     totalItems: {
       type: Number,
       required: false,

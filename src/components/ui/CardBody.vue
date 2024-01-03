@@ -32,5 +32,5 @@ export default {
 </script>
 
 <template>
-  <div :class="classes"><slot name="children"></slot></div>
+  <div :class="classes"><slot></slot></div>
 </template>

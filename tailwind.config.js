@@ -5,6 +5,7 @@ import themeConfig from "./configs/themeConfig";
 module.exports = {
   content: [
     "./index.html",
+    "./configs/themeConfig.js",
     "./src/**/*.{vue,js,ts,jsx,tsx}",
     "./src/stories/**/*.{js,ts,jsx,tsx,mdx}",
   ],

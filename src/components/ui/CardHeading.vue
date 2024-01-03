@@ -23,7 +23,7 @@ export default {
 
     return {
       classes: computed(() => ({
-        'border-b border-gray-200 p-4': true,
+        'border-b border-grayscale-200 dark:border-grayscale-800 p-4 text-grayscale-900 dark:text-grayscale-50': true,
         [props.className]: true
       }))
     }
@@ -33,6 +33,6 @@ export default {
 
 <template>
   <header :class="classes">
-    <slot name="children"></slot>
+    <slot></slot>
   </header>
 </template>

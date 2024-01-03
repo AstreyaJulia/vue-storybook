@@ -36,9 +36,7 @@ const Template = (args) => ({
   },
   template: `
       <CardBasic v-bind="args">
-        <template #children>
-          <PlaceholderBasic className="h-32 w-full text-gray-200"/>
-        </template>
+          <PlaceholderBasic className="h-32 w-full text-grayscale-200"/>
       </CardBasic>
     `
 })
@@ -65,19 +63,16 @@ export const BasicCard = {
     },
     template: `
           <CardBasic v-bind="args">
-            <template #children>
               <CardBody>
-                <template #children>
                   <TypographyElement variant="card-title">
-                    <template #children>Заголовок</template>
+                    Заголовок
                   </TypographyElement>
                   <TypographyElement variant="card-subtitle" className="mt-1">
-                    <template #children>Подзаголовок</template>
+                    Подзаголовок
                   </TypographyElement>
                   <TypographyElement variant="text-main" className="my-4">
-                    <template #children>Небольшой пример текста, который будет опираться на заголовок карточки и
+                    Небольшой пример текста, который будет опираться на заголовок карточки и
                       составлять основную часть контента.
-                    </template>
                   </TypographyElement>
                   <ButtonBasic variant="link">
                     <template #label>Ссылка</template>
@@ -85,9 +80,7 @@ export const BasicCard = {
                       <ChevronRightIcon/>
                     </template>
                   </ButtonBasic>
-                </template>
               </CardBody>
-            </template>
           </CardBasic>
         `
   }),
@@ -113,22 +106,19 @@ export const CardWithHeading = {
     },
     template: `
           <CardBasic v-bind="args">
-            <template #children>
               <CardHeading>
-                <template #children><p>Рекомендуемые</p></template>
+                <p>Рекомендуемые</p>
               </CardHeading>
               <CardBody>
-                <template #children>
                   <TypographyElement variant="card-title">
-                    <template #children>Заголовок</template>
+                    Заголовок
                   </TypographyElement>
                   <TypographyElement variant="card-subtitle" className="mt-1">
-                    <template #children>Подзаголовок</template>
+                    Подзаголовок
                   </TypographyElement>
                   <TypographyElement variant="text-main" className="my-4">
-                    <template #children>Небольшой пример текста, который будет опираться на заголовок карточки и
+                    Небольшой пример текста, который будет опираться на заголовок карточки и
                       составлять основную часть контента.
-                    </template>
                   </TypographyElement>
                   <ButtonBasic variant="link">
                     <template #label>Ссылка</template>
@@ -136,9 +126,7 @@ export const CardWithHeading = {
                       <ChevronRightIcon/>
                     </template>
                   </ButtonBasic>
-                </template>
               </CardBody>
-            </template>
           </CardBasic>
         `
   }),
@@ -164,19 +152,16 @@ export const CardWithFooter = {
     },
     template: `
           <CardBasic v-bind="args">
-            <template #children>
               <CardBody>
-                <template #children>
                   <TypographyElement variant="card-title">
-                    <template #children>Заголовок</template>
+                    Заголовок
                   </TypographyElement>
                   <TypographyElement variant="card-subtitle" className="mt-1">
-                    <template #children>Подзаголовок</template>
+                    Подзаголовок
                   </TypographyElement>
                   <TypographyElement variant="text-main" className="my-4">
-                    <template #children>Небольшой пример текста, который будет опираться на заголовок карточки и
+                    Небольшой пример текста, который будет опираться на заголовок карточки и
                       составлять основную часть контента.
-                    </template>
                   </TypographyElement>
                   <ButtonBasic variant="link">
                     <template #label>Ссылка</template>
@@ -184,14 +169,10 @@ export const CardWithFooter = {
                       <ChevronRightIcon/>
                     </template>
                   </ButtonBasic>
-                </template>
               </CardBody>
               <CardFooter>
-                <template #children>
                   <p>Последнее обновление 5 мин назад</p>
-                </template>
               </CardFooter>
-            </template>
           </CardBasic>
         `
   }),
@@ -215,24 +196,19 @@ export const CardWithImage = {
     },
     template: `
           <CardBasic v-bind="args">
-            <template #children>
               <img :src="image" alt="Изображение для карточки" class="w-full h-48 object-cover">
               <CardBody>
-                <template #children>
                   <TypographyElement variant="card-title">
-                    <template #children>Заголовок</template>
+                    Заголовок
                   </TypographyElement>
                   <TypographyElement variant="text-main" className="my-4">
-                    <template #children>Небольшой пример текста, который будет опираться на заголовок карточки и
+                    Небольшой пример текста, который будет опираться на заголовок карточки и
                       составлять основную часть контента.
-                    </template>
                   </TypographyElement>
-                </template>
               </CardBody>
               <CardFooter>
-                <template #children><p>Последнее обновление 5 мин назад</p></template>
+                <p>Последнее обновление 5 мин назад</p>
               </CardFooter>
-            </template>
           </CardBasic>
         `
   }),
@@ -256,28 +232,22 @@ export const CardWithImageInsideBody = {
     },
     template: `
           <CardBasic v-bind="args">
-            <template #children>
               <CardBody className="overflow-hidden">
-                <template #children>
                   <img :src="image" alt="Изображение для карточки"
-                                         class="rounded-md w-full h-48 object-cover"></template>
+                                         class="rounded-md w-full h-48 object-cover">
               </CardBody>
               <CardBody>
-                <template #children>
                   <TypographyElement variant="card-title">
-                    <template #children>Заголовок</template>
+                    Заголовок
                   </TypographyElement>
                   <TypographyElement variant="text-main" className="my-4">
-                    <template #children>Небольшой пример текста, который будет опираться на заголовок карточки и
+                    Небольшой пример текста, который будет опираться на заголовок карточки и
                       составлять основную часть контента.
-                    </template>
                   </TypographyElement>
-                </template>
               </CardBody>
               <CardFooter>
-                <template #children><p>Последнее обновление 5 мин назад</p></template>
+                <p>Последнее обновление 5 мин назад</p>
               </CardFooter>
-            </template>
           </CardBasic>
         `
   }),
@@ -302,31 +272,22 @@ export const CardWithButton = {
     },
     template: `
           <CardBasic v-bind="args">
-            <template #children>
               <img :src="image" alt="Изображение для карточки" class="w-full h-48 object-cover">
               <CardBody>
-                <template #children>
-                  <TypographyElement variant="card-title">
-                    <template #children>Заголовок</template>
-                  </TypographyElement>
+                  <TypographyElement variant="card-title">Заголовок</TypographyElement>
                   <TypographyElement variant="text-main" className="my-4">
-                    <template #children>Небольшой пример текста, который будет опираться на заголовок карточки и
+                    Небольшой пример текста, который будет опираться на заголовок карточки и
                       составлять основную часть контента.
-                    </template>
                   </TypographyElement>
-                </template>
               </CardBody>
               <CardFooter>
-                <template #children>
                   <ButtonBasic variant="primary" type="submit">
                     <template #label>Перейти куда-нибудь</template>
                   </ButtonBasic>
                   <ButtonBasic variant="link" type="submit">
                     <template #label>Ссылка</template>
                   </ButtonBasic>
-                </template>
               </CardFooter>
-            </template>
           </CardBasic>
         `
   }),
@@ -349,21 +310,16 @@ export const CardOverlay = {
     },
     template: `
           <CardBasic v-bind="args">
-            <template #children>
               <img :src="image" alt="Изображение для карточки" class="w-full h-56 object-cover">
-              <CardBody className="absolute inset-0 bg-white/70">
-                <template #children>
-                  <TypographyElement variant="card-title">
-                    <template #children>Заголовок</template>
+              <CardBody className="absolute inset-0 bg-white/70 dark:bg-grayscale-950/70">
+                  <TypographyElement variant="card-title" >
+                    Заголовок
                   </TypographyElement>
                   <TypographyElement variant="text-main" className="my-4">
-                    <template #children>Небольшой пример текста, который будет опираться на заголовок карточки и
+                    Небольшой пример текста, который будет опираться на заголовок карточки и
                       составлять основную часть контента.
-                    </template>
                   </TypographyElement>
-                </template>
               </CardBody>
-            </template>
           </CardBasic>
         `
   }),
@@ -386,22 +342,17 @@ export const CardHorizontal = {
     },
     template: `
           <CardBasic v-bind="args">
-            <template #children>
               <img :src="image" alt="Изображение для карточки"
                                      class="w-44 shrink-0 self-stretch object-cover">
               <CardBody>
-                <template #children>
                   <TypographyElement variant="card-title">
-                    <template #children>Заголовок</template>
+                    Заголовок
                   </TypographyElement>
                   <TypographyElement variant="text-main" className="my-4">
-                    <template #children>Небольшой пример текста, который будет опираться на заголовок карточки и
+                    Небольшой пример текста, который будет опираться на заголовок карточки и
                       составлять основную часть контента.
-                    </template>
                   </TypographyElement>
-                </template>
               </CardBody>
-            </template>
           </CardBasic>
         `
   }),
@@ -425,23 +376,18 @@ export const CardWithCentredBody = {
     },
     template: `
           <CardBasic v-bind="args">
-            <template #children>
               <CardBody className="flex flex-col items-center">
-                <template #children>
                   <TypographyElement variant="card-title">
-                    <template #children>Заголовок</template>
+                    Заголовок
                   </TypographyElement>
                   <TypographyElement variant="text-main" className="my-4 text-center">
-                    <template #children>Небольшой пример текста, который будет опираться на заголовок карточки и
+                    Небольшой пример текста, который будет опираться на заголовок карточки и
                       составлять основную часть контента.
-                    </template>
                   </TypographyElement>
                   <ButtonBasic variant="link" type="submit">
                     <template #label>Ссылка</template>
                   </ButtonBasic>
-                </template>
               </CardBody>
-            </template>
           </CardBasic>
         `
   }),
@@ -464,25 +410,20 @@ export const CardTopBordered = {
     },
     template: `
           <CardBasic v-bind="args">
-            <template #children>
               <CardBody>
-                <template #children>
                   <TypographyElement variant="card-title">
-                    <template #children>Заголовок</template>
+                    Заголовок
                   </TypographyElement>
                   <TypographyElement variant="text-main" className="my-4">
-                    <template #children>Небольшой пример текста, который будет опираться на заголовок карточки и
+                    Небольшой пример текста, который будет опираться на заголовок карточки и
                       составлять основную часть контента.
-                    </template>
                   </TypographyElement>
-                </template>
               </CardBody>
-            </template>
           </CardBasic>
         `
   }),
   args: {
-    className: 'max-w-sm border-t-4 border-t-brand-500',
+    className: 'max-w-sm border-t-4 border-t-brand-500 dark:border-t-brand-400',
     variant: 'default'
   }
 }
@@ -500,25 +441,20 @@ export const CardLeftBordered = {
     },
     template: `
           <CardBasic v-bind="args">
-            <template #children>
               <CardBody>
-                <template #children>
                   <TypographyElement variant="card-title">
-                    <template #children>Заголовок</template>
+                    Заголовок
                   </TypographyElement>
                   <TypographyElement variant="text-main" className="my-4">
-                    <template #children>Небольшой пример текста, который будет опираться на заголовок карточки и
+                    Небольшой пример текста, который будет опираться на заголовок карточки и
                       составлять основную часть контента.
-                    </template>
                   </TypographyElement>
-                </template>
               </CardBody>
-            </template>
           </CardBasic>
         `
   }),
   args: {
-    className: 'max-w-sm border-l-8 border-l-brand-500',
+    className: 'max-w-sm border-l-8 border-l-brand-500 dark:border-l-brand-400',
     variant: 'default'
   }
 }
@@ -538,19 +474,15 @@ export const CardEmptyState = {
     },
     template: `
           <CardBasic v-bind="args">
-            <template #children>
               <CardBody className="flex flex-col items-center gap-y-4 px-4 py-16">
-                <template #children>
-                  <FolderPlusIcon class="h-12 w-12 text-gray-400"/>
+                  <FolderPlusIcon class="h-12 w-12 text-grayscale-400"/>
                   <TypographyElement variant="text-secondary">
-                    <template #children>Вы не создали ни одного проекта.</template>
+                    Вы не создали ни одного проекта.
                   </TypographyElement>
                   <ButtonBasic variant="primary" type="submit">
                     <template #label>Создать</template>
                   </ButtonBasic>
-                </template>
               </CardBody>
-            </template>
           </CardBasic>
         `
   }),
@@ -580,22 +512,16 @@ export const CardWithScroll = {
     },
     template: `
           <CardBasic v-bind="args">
-            <template #children>
               <Simplebar forceVisible="y" :style="{ maxWidth: '100%', width: '100%' }" autoHide="false">
-              
               <CardBody>
-                <template #children>
-                  
                   <TypographyElement variant="card-title">
-                    <template #children>Заголовок</template>
+                    Заголовок
                   </TypographyElement>
-
                   <TypographyElement variant="card-subtitle" className="mt-1">
-                    <template #children>Подзаголовок</template>
+                    Подзаголовок
                   </TypographyElement>
-
                   <TypographyElement variant="text-main" className="mt-4">
-                    <template #children>Далеко-далеко за словесными горами в стране гласных и согласных живут
+                    Далеко-далеко за словесными горами в стране гласных и согласных живут
                       рыбные тексты. Вдали от всех живут они в буквенных домах на берегу
                       Семантика большого языкового океана. Маленький ручеек Даль журчит по
                       всей стране и обеспечивает ее всеми необходимыми правилами. Эта
@@ -615,14 +541,9 @@ export const CardWithScroll = {
                       переписывается по несколько раз. Единственное, что от меня осталось,
                       это приставка «и». Возвращайся ты лучше в свою безопасную страну». Не
                       послушавшись рукописи, наш текст продолжил свой путь.
-                    </template>
                   </TypographyElement>
-                  
-                </template>
               </CardBody>
-                
               </Simplebar>
-            </template>
           </CardBasic>
         `
   })

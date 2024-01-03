@@ -1,5 +1,35 @@
-.sbdocs.sbdocs-preview .docs-story,
+.sbdocs.sbdocs-preview,
 .bg-dots-slate-200 {
     background-color: #f1f5f9;
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' width='16' height='16' fill='none' stroke='%23cbd5e1'%3e%3Ccircle cx='8' cy='8' r='0.5' fill='%23e2e8f0'%3E%3C%2Fcircle%3E%3c/svg%3e");
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' width='16' height='16' fill='none' stroke='%23cbd5e1'%3e%3Ccircle cx='8' cy='8' r='0.5' fill='%23cbd5e1'%3E%3C%2Fcircle%3E%3c/svg%3e");
+}
+
+.dark .sbdocs.sbdocs-preview,
+.dark .bg-dots-slate-200 {
+    background-color: #0f172a;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' width='16' height='16' fill='none' stroke='%23334155'%3e%3Ccircle cx='8' cy='8' r='0.5' fill='%23334155'%3E%3C%2Fcircle%3E%3c/svg%3e");
+}
+
+.sbdocs.sbdocs-wrapper {
+    background-color: #ffffff !important;
+}
+
+.dark .sbdocs.sbdocs-wrapper {
+    background-color: #030712 !important;
+}
+
+.sb-main-centered.sb-show-main {
+    background-color: #ffffff !important;
+}
+
+.dark .sb-main-centered.sb-show-main {
+    background-color: #030712 !important;
+}
+
+.docblock-argstable-head tr th span {
+    color: #6b7280 !important;
+}
+
+.dark .docblock-argstable-headn tr th span {
+    color: #9ca3af !important;
 }

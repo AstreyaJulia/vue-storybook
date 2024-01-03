@@ -6,73 +6,80 @@ const variants = {
     element: 'h1',
     basicClass: 'font-bold',
     textSize: 'text-6xl',
-    textColor: 'text-gray-800'
+    textColor: 'text-grayscale-800 dark:text-grayscale-100'
   },
   h2: {
     element: 'h2',
     basicClass: 'font-bold',
     textSize: 'text-5xl',
-    textColor: 'text-gray-800'
+    textColor: 'text-grayscale-800 dark:text-grayscale-100'
   },
   h3: {
     element: 'h3',
     basicClass: 'font-bold',
     textSize: 'text-4xl',
-    textColor: 'text-gray-800'
+    textColor: 'text-grayscale-800 dark:text-grayscale-100'
   },
   h4: {
     element: 'h4',
     basicClass: 'font-bold',
     textSize: 'text-3xl',
-    textColor: 'text-gray-800'
+    textColor: 'text-grayscale-800 dark:text-grayscale-100'
   },
   h5: {
     element: 'h5',
-    basicClass: 'font-bold',
+    basicClass: 'font-semibold',
     textSize: 'text-xl',
-    textColor: 'text-gray-800'
+    textColor: 'text-grayscale-800 dark:text-grayscale-100'
   },
   h6: {
     element: 'h6',
-    basicClass: 'font-bold',
+    basicClass: 'font-semibold',
     textSize: 'text-lg',
-    textColor: 'text-gray-800'
+    textColor: 'text-grayscale-800 dark:text-grayscale-100'
   },
   label: {
     element: 'p',
     basicClass: '',
     textSize: 'text-sm',
-    textColor: 'text-gray-600'
+    textColor: 'text-grayscale-600 dark:text-grayscale-300'
   },
   caption: {
     element: 'p',
     basicClass: '',
     textSize: 'text-sm',
-    textColor: 'text-gray-400'
+    textColor: 'text-grayscale-400 dark:text-grayscale-500'
   },
   'card-title': {
     element: 'h5',
     basicClass: 'font-semibold',
     textSize: 'text-lg',
-    textColor: 'text-gray-800'
+    textColor: 'text-grayscale-800 dark:text-grayscale-100'
   },
   'card-subtitle': {
     element: 'p',
     basicClass: 'font-medium uppercase',
     textSize: 'text-sm',
-    textColor: 'text-gray-600'
+    textColor: 'text-grayscale-600 dark:text-grayscale-300'
   },
   'text-main': {
     element: 'p',
     basicClass: '',
     textSize: 'text-base',
-    textColor: 'text-gray-800'
+    textColor: 'text-grayscale-800 dark:text-grayscale-100'
   },
   'text-secondary': {
     element: 'p',
     basicClass: '',
     textSize: 'text-base',
-    textColor: 'text-gray-600'
+    textColor: 'text-grayscale-600 dark:text-grayscale-300'
+  },
+  blockquote: {
+    element: 'blockquote',
+    basicClass:
+      'border-l-4 border-l-brand-600 dark:border-l-brand-500 p-2 pl-4 bg-slate-100 dark:bg-slate-800',
+    textSize: 'text-base',
+    textColor: 'text-grayscale-800 dark:text-grayscale-50'
   }
 }
 
@@ -128,5 +135,5 @@ export default {
 </script>
 
 <template>
-  <component :is="element" :class="classes"><slot name="children"></slot></component>
+  <component :is="element" :class="classes"><slot></slot></component>
 </template>

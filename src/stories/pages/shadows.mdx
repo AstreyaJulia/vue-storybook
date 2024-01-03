@@ -1,82 +1,78 @@
-import { Meta } from "@storybook/blocks";
-import { styles } from "../styles/mdxStorybookStyes";
+import {Meta, Unstyled} from "@storybook/blocks";
 import storybook0005 from '../assets/images/storybook0005.jpg'
+import TypographyElement from "@/components/ui/TypographyElement.vue";
 
-<Meta title="Тени и размытие фона" />
+<Meta title="Тени и размытие фона"/>
+<Unstyled>
+    <TypographyElement variant="h1" className="mb-10">Тени и размытие фона</TypographyElement>
+    <TypographyElement variant="h2" className="mb-10">Тени</TypographyElement>
+    <TypographyElement variant="text-main" className="mb-4">Тени позволяют добавить глубины и реализма дизайнам, располагая элементы по оси
+        Z. (В тёмном режиме тени не используются)</TypographyElement>
+    <TypographyElement variant="h3" className="mb-10">Падающая тень (box shadow)</TypographyElement>
 
- <h1 className="story storybook-docs-h1">Тени и размытие фона</h1>
+    <div className="flex items-center gap-7 flex-wrap">
+        <div className="flex flex-col gap-5">
+            <span className="w-28 h-28 rounded-lg shadow-sm dark:shadow-none bg-white dark:bg-grayscale-900"/>
+            <TypographyElement variant="text-main">shadow-sm</TypographyElement>
+        </div>
+        <div className="flex flex-col gap-5">
+            <span className="w-28 h-28 rounded-lg shadow dark:shadow-none bg-white dark:bg-grayscale-900"/>
+            <TypographyElement variant="text-main">shadow</TypographyElement>
+        </div>
+        <div className="flex flex-col gap-5">
+            <span className="w-28 h-28 rounded-lg shadow-md dark:shadow-none bg-white dark:bg-grayscale-900"/>
+            <TypographyElement variant="text-main">shadow-md</TypographyElement>
+        </div>
+        <div className="flex flex-col gap-5">
+            <span className="w-28 h-28 rounded-lg shadow-lg dark:shadow-none bg-white dark:bg-grayscale-900"/>
+            <TypographyElement variant="text-main">shadow-lg</TypographyElement>
+        </div>
+        <div className="flex flex-col gap-5">
+            <span className="w-28 h-28 rounded-lg shadow-xl dark:shadow-none bg-white dark:bg-grayscale-900"/>
+            <TypographyElement variant="text-main">shadow-xl</TypographyElement>
+        </div>
+    </div>
+    <TypographyElement variant="h3" className="my-10">Внутренняя тень (box shadow inner)</TypographyElement>
+    <div className="flex items-center gap-7 flex-wrap">
+        <div className="flex flex-col gap-5">
+            <span className="w-28 h-28 rounded-lg shadow-inner dark:shadow-none bg-white dark:bg-grayscale-900"/>
+            <TypographyElement variant="text-main">shadow-inner</TypographyElement>
+        </div>
+    </div>
 
-<h2 className="story storybook-docs-h2">Тени</h2>
- <p className="story storybook-text">Тени позволяют добавить глубины и реализма дизайнам, располагая элементы по оси Z.</p>
+    <TypographyElement variant="h2" className="my-10">Размытие фона</TypographyElement>
+    <TypographyElement variant="text-main" className="my-4">Размытие фона часто стилистически используется в современном дизайне
+        пользовательского интерфейса. Однако, как и тени, они позволяют добавлять глубину и реалистичность дизайну,
+        располагая элементы по оси Z.</TypographyElement>
 
-<div className="pt-16">
-  <h3 className="story storybook-docs-h3">Падающая тень (box shadow)</h3>
-  <div className="flex items-center gap-7 flex-wrap">
-    <div className="flex flex-col gap-5">
-      <span className="w-28 h-28 rounded-lg shadow-sm bg-white"/>
-      <p className="story storybook-caption2">shadow-sm</p>
+    <div className="flex items-center gap-7 flex-wrap mt-16">
+        <div className="flex flex-col gap-5">
+            <img src={storybook0005} alt="Изображение" className="w-28 h-28 rounded-lg blur-sm bg-white dark:bg-grayscale-900"/>
+            <TypographyElement variant="text-main">blur-sm</TypographyElement>
+        </div>
+        <div className="flex flex-col gap-5">
+            <img src={storybook0005} alt="Изображение" className="w-28 h-28 rounded-lg blur bg-white dark:bg-grayscale-900"/>
+            <TypographyElement variant="text-main">blur</TypographyElement>
+        </div>
+        <div className="flex flex-col gap-5">
+            <img src={storybook0005} alt="Изображение" className="w-28 h-28 rounded-lg blur-md bg-white dark:bg-grayscale-900"/>
+            <TypographyElement variant="text-main">blur-md</TypographyElement>
+        </div>
+        <div className="flex flex-col gap-5">
+            <img src={storybook0005} alt="Изображение" className="w-28 h-28 rounded-lg blur-lg bg-white dark:bg-grayscale-900"/>
+            <TypographyElement variant="text-main">blur-lg</TypographyElement>
+        </div>
+        <div className="flex flex-col gap-5">
+            <img src={storybook0005} alt="Изображение" className="w-28 h-28 rounded-lg blur-xl bg-white dark:bg-grayscale-900"/>
+            <TypographyElement variant="text-main">blur-xl</TypographyElement>
+        </div>
+        <div className="flex flex-col gap-5">
+            <img src={storybook0005} alt="Изображение" className="w-28 h-28 rounded-lg blur-2xl bg-white dark:bg-grayscale-900"/>
+            <TypographyElement variant="text-main">blur-2xl</TypographyElement>
+        </div>
+        <div className="flex flex-col gap-5">
+            <img src={storybook0005} alt="Изображение" className="w-28 h-28 rounded-lg blur-3xl bg-white dark:bg-grayscale-900"/>
+            <TypographyElement variant="text-main">blur-3xl</TypographyElement>
+        </div>
     </div>
-    <div className="flex flex-col gap-5">
-      <span className="w-28 h-28 rounded-lg shadow bg-white"/>
-      <p className="story storybook-caption2">shadow</p>
-    </div>
-    <div className="flex flex-col gap-5">
-      <span className="w-28 h-28 rounded-lg shadow-md bg-white"/>
-      <p className="story storybook-caption2">shadow-md</p>
-    </div>
-    <div className="flex flex-col gap-5">
-      <span className="w-28 h-28 rounded-lg shadow-lg bg-white"/>
-      <p className="story storybook-caption2">shadow-lg</p>
-    </div>
-    <div className="flex flex-col gap-5">
-      <span className="w-28 h-28 rounded-lg shadow-xl bg-white"/>
-      <p className="story storybook-caption2">shadow-xl</p>
-    </div>
-  </div>
-</div>
-<div className="pt-16">
-  <h3 className="story storybook-docs-h3">Внутренняя тень (box shadow inner)</h3>
-  <div className="flex items-center gap-7 flex-wrap">
-    <div className="flex flex-col gap-5">
-      <span className="w-28 h-28 rounded-lg shadow-inner bg-white"/>
-      <p className="story storybook-caption2">shadow-inner</p>
-    </div>
-  </div>
-</div>
-
-<h2 className="story storybook-docs-h2">Размытие фона</h2>
- <p className="story storybook-text">Размытие фона часто стилистически используется в современном дизайне пользовательского интерфейса. Однако, как и тени, они позволяют добавлять глубину и реалистичность дизайну, располагая элементы по оси Z.</p>
-<div className="pt-16">
-  <div className="flex items-center gap-7 flex-wrap">
-    <div className="flex flex-col gap-5">
-      <img src={storybook0005} alt="Изображение" className="w-28 h-28 rounded-lg blur-sm bg-white"/>
-      <p className="story storybook-caption2">blur-sm</p>
-    </div>
-    <div className="flex flex-col gap-5">
-      <img src={storybook0005} alt="Изображение" className="w-28 h-28 rounded-lg blur bg-white"/>
-      <p className="story storybook-caption2">blur</p>
-    </div>
-    <div className="flex flex-col gap-5">
-      <img src={storybook0005} alt="Изображение" className="w-28 h-28 rounded-lg blur-md bg-white"/>
-      <p className="story storybook-caption2">blur-md</p>
-    </div>
-    <div className="flex flex-col gap-5">
-      <img src={storybook0005} alt="Изображение" className="w-28 h-28 rounded-lg blur-lg bg-white"/>
-      <p className="story storybook-caption2">blur-lg</p>
-    </div>
-    <div className="flex flex-col gap-5">
-      <img src={storybook0005} alt="Изображение" className="w-28 h-28 rounded-lg blur-xl bg-white"/>
-      <p className="story storybook-caption2">blur-xl</p>
-    </div>
-    <div className="flex flex-col gap-5">
-      <img src={storybook0005} alt="Изображение" className="w-28 h-28 rounded-lg blur-2xl bg-white"/>
-      <p className="story storybook-caption2">blur-2xl</p>
-    </div>
-    <div className="flex flex-col gap-5">
-      <img src={storybook0005} alt="Изображение" className="w-28 h-28 rounded-lg blur-3xl bg-white"/>
-      <p className="story storybook-caption2">blur-3xl</p>
-    </div>
-  </div>
-</div>
-
-<style>{styles}</style>
+    </Unstyled>

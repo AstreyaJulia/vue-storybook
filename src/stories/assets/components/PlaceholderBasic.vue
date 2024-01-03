@@ -21,7 +21,7 @@ export default {
 
     return {
       classes: computed(() => ({
-        'rounded-md border-2 border-dashed border-gray-200': true,
+        'rounded-md border-2 border-dashed border-grayscale-200 dark:border-grayscale-800': true,
         [props.className]: true
       }))
     }

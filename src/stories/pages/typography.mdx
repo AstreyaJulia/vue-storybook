@@ -1,77 +1,29 @@
-import { Meta } from "@storybook/blocks";
-import { styles } from "../styles/mdxStorybookStyes";
-import storybook0006 from '../assets/images/storybook0006.jpg'
-import storybook0007 from '../assets/images/storybook0007.jpg'
-import storybook0008 from '../assets/images/storybook0008.jpg'
-import storybook0009 from '../assets/images/storybook0009.jpg'
+import {Meta, Unstyled} from "@storybook/blocks";
+import TypographyElement from "@/components/ui/TypographyElement.vue";
 
-<Meta title="Типографика" />
+<Meta title="Типографика"/>
+<Unstyled>
+    <TypographyElement variant="h1" className="mb-6">Типографика</TypographyElement>
+    <TypographyElement variant="h4" className="mb-4">Без засечек, основной</TypographyElement>
 
-<h1 className="story storybook-docs-h1">Типографика</h1>
-<div className="pt-10">
-    <h3 className="story storybook-docs-h3">Без засечек, основной</h3>
-    <div className="rounded-lg bg-white border border-gray-200 shadow-sm bg-dots-slate-200 p-5">
-        <p className="story storybook-text">Open Sans</p>
-        <p className="story storybook-docs-h1">Ag</p>
-        <p className="story storybook-text">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br/>abcdefghijklmnopqrstuvwxyz<br/>0123456789</p>
-        <p className="story storybook-text">АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЬЫЪЭЮЯ<br/>абвгдеёжзийклмнопрстуфхцчшщьыъэюя<br/>!@#$%^&*()</p>
+    <div className="rounded-lg bg-white border border-grayscale-200 dark:border-grayscale-800 shadow-sm bg-dots-slate-200 p-5 mb-8">
+        <TypographyElement variant="text-main" className="mb-4">Open Sans</TypographyElement>
+        <TypographyElement variant="h1" className="mb-4">Ag</TypographyElement>
+        <TypographyElement variant="text-main" className="mb-4">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br/>abcdefghijklmnopqrstuvwxyz<br/>0123456789</TypographyElement>
+        <TypographyElement
+            variant="text-main">АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЬЫЪЭЮЯ<br/>абвгдеёжзийклмнопрстуфхцчшщьыъэюя<br/>!@#$%^&*()</TypographyElement>
     </div>
-    <h3 className="story storybook-docs-h3">С засечками, дополнительный</h3>
-    <div className="rounded-lg bg-white border border-gray-200 shadow-sm bg-dots-slate-200 p-5">
-        <p className="story storybook-text" style={{fontFamily: '"Noto Serif", serif'}}>Noto Serif</p>
-        <p className="story storybook-docs-h1" style={{fontFamily: '"Noto Serif", serif'}}>Ag</p>
-        <p className="story storybook-text" style={{fontFamily: '"Noto Serif", serif'}}>ABCDEFGHIJKLMNOPQRSTUVWXYZ<br/>abcdefghijklmnopqrstuvwxyz<br/>0123456789</p>
-        <p className="story storybook-text" style={{fontFamily: '"Noto Serif", serif'}}>АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЬЫЪЭЮЯ<br/>абвгдеёжзийклмнопрстуфхцчшщьыъэюя<br/>!@#$%^&*()</p>
+    <TypographyElement variant="h4" className="mb-4">С засечками, дополнительный</TypographyElement>
+
+    <div className="rounded-lg bg-white border border-grayscale-200 dark:border-grayscale-800 shadow-sm bg-dots-slate-200 p-5 mb-8">
+        <TypographyElement variant="text-main" className="mb-4 font-serif">Noto Serif</TypographyElement>
+        <TypographyElement variant="h1" className="mb-4 font-serif">Ag</TypographyElement>
+        <TypographyElement variant="text-main" className="mb-4 font-serif">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br/>abcdefghijklmnopqrstuvwxyz<br/>0123456789</TypographyElement>
+        <TypographyElement variant="text-main" className="font-serif">АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЬЫЪЭЮЯ<br/>абвгдеёжзийклмнопрстуфхцчшщьыъэюя<br/>!@#$%^&*()</TypographyElement>
     </div>
 
-</div>
-<div className="pt-10">
-  <p className="story storybook-text">Для стилизации текста можно использовать как встроенные стили Tailwind CSS, так и компонент <code>Typography</code></p>
-  <p className="flex items-center gap-2">[Документация компонента Typography](?path=/docs/components-ui-typography--docs)</p>
-</div>
-<div className="pt-16">
-  <h3 className="story storybook-docs-h3">Хорошая типографика</h3>
-  <p className="story storybook-text">Система типографики — одна из самых основополагающих частей любого дизайна интерфейса. Если ваши пользователи не могут читать ваш контент, вы можете немедленно с ними попрощаться. Вот почему даже элементарное понимание типографики означает, что вы можете определить для себя лучшие шрифты для современного дизайна пользовательского интерфейса.</p>
-  <p className="story storybook-text">Я всегда чувствовал, что хорошая типографика — это самый недооцененный элемент современного дизайна продукта. Текст никогда не бывает просто текстом. В хорошем дизайне это часто остается незамеченным, но хороший шрифтовой дизайн может вызвать эмоции, направить внимание и даже создать типографскую идентичность.</p>
-  <p className="story storybook-text">Плохая типографика, напротив, бросается в глаза. Даже людям, не ориентированным на дизайн, плохую типографику легко заметить. Это плохо отражается на бренде и приводит к ухудшению пользовательского опыта, даже если пользователи не могут понять, почему...</p>
-  <p className="story storybook-text">Часто дизайнеры прибегают к тенденциям вместо того, чтобы тщательно продумать лучшую типографику для дизайна. Частично потому, что хорошими навыками типографики овладеть сложно. В сочетании с отличным копирайтингом понимание основ эффективной типографики является мощным фактором, который поможет вам выделиться и улучшить взаимодействие с пользователем.</p>
-</div>
-<div className="pt-16">
-  <h3 className="story storybook-docs-h3">Что означает «Дисплей»?</h3>
-  <p className="story storybook-text">Стиль отображаемого текста предназначен для использования в больших размерах для заголовков, а не для расширенных фрагментов основного текста.</p>
-  <p className="story storybook-text">Как правило, «текстовые» стили следует использовать для большей части информационного текста (тело, метки, элементы пользовательского интерфейса), тогда как более крупные «отображаемые» стили следует зарезервировать для заголовков (H1–H6).</p>
-  <a href={storybook0006} className="story storybook-link" target='_blank' rel="noreferrer">
-    <img src={storybook0006} alt="Что означает «Дисплей»?" className="w-2/3" />
-  </a>
-</div>
-<div className="pt-16">
-  <h3 className="story storybook-docs-h3">Базовый размер шрифта</h3>
-  <p className="story storybook-text">Определение базового размера шрифта — важный шаг для адаптивного дизайна. Базовый размер шрифта относится к размеру шрифта «по умолчанию» или «основному», используемому на веб-сайте или в приложении. Базовый шрифт обычно применяется к большинству абзацев, меток, меню и списков.</p>
-  <p className="story storybook-text">В большинстве современных пользовательских интерфейсов и веб-сайтов используется базовый размер шрифта 16 пикселей. Это всегда хороший вариант по умолчанию, поскольку пользователи могут читать текст на экране.</p>
-  <p className="story storybook-text">В конечном счете, вы хотите, чтобы основной текст на вашем телефоне (когда он находился на естественном расстоянии) был так же читабелен, как и текст в хорошо напечатанной книге (когда он находился на естественном — обычно немного большем) расстоянии.</p>
-  <a href={storybook0007} className="story storybook-link" target='_blank' rel="noreferrer">
-    <img src={storybook0007} alt="Базовый размер шрифта" className="w-2/3" />
-  </a>
-</div>
-<div className="pt-16">
-  <h3 className="story storybook-docs-h3">Высота строки</h3>
-  <p className="story storybook-text">Определение правильной высоты строки для стилей текста важно для обеспечения читаемости. Определение правильной высоты строки может различаться в зависимости от шрифта и размера, поэтому важно корректировать и экспериментировать, пока она не будет выглядеть и «ощущаться» правильно — это не точная наука.</p>
-  <p className="story storybook-text">Как правило (и это хорошая отправная точка), размер основного текста должен составлять от 1,5 до 2 раз больше размера текста, в зависимости от ширины и длины контента. Например, если размер основного текста составляет 16 пикселей, установите высоту строки на 1,5 или 24 пикселя.</p>
-  <p className="story storybook-text">Еще больше усложняет ситуацию то, что существует обратная зависимость между размером шрифта и соответствующей высотой строки: чем больше текст, тем меньше должна быть высота строки. Как правило, для отображаемого текста (заголовков и т. д.) беспроигрышным вариантом обычно является увеличение от 1 до 1,25x. Например, если размер отображаемого текста составляет 60 пикселей, установите высоту строки примерно на 1,2 или 72 пикселя и посмотрите, как это будет выглядеть.</p>
-  <p className="story storybook-text">Мы протестировали типографский масштаб Untitled в десятках проектов, чтобы убедиться, что он достаточно надежен для использования (почти) в любом проекте.</p>
-  <a href={storybook0008} className="story storybook-link" target='_blank' rel="noreferrer">
-    <img src={storybook0008} alt="Высота строки" className="w-2/3" />
-  </a>
-</div>
-<div className="pt-16">
-  <h3 className="story storybook-docs-h3">Оптимизация интервала между буквами для отображаемого текста</h3>
-  <p className="story storybook-text">Часто гарнитуры разрабатываются с учетом предполагаемого использования — они оптимизированы для использования на дисплее (большие заголовки) или текста (меньший основной текст и т. д.). В общем, текст предназначен для разборчивости и удобочитаемости при небольших размерах.</p>
-  <p className="story storybook-text">Не волнуйтесь, вам не обязательно выбирать отдельный шрифт для отображения и текста. Многие шрифты можно использовать и для того, и для другого. Inter является отличным примером: его чистый, последовательный и несложный дизайн делает его подходящим для использования любого размера.</p>
-  <p className="story storybook-text">Однако если вы используете один и тот же шрифт как для основного текста, так и для теста отображения, часто бывает полезно настроить интервал между буквами в соответствии со стилем отображаемого текста, чтобы сделать его более разборчивым при увеличении размера. Однако не переусердствуйте: немного полезного и помогает отображать текст более плотным.</p>
-  <p className="story storybook-text">К сожалению, Figma позволяет вам определять значение % для межбуквенного интервала только в текстовых стилях, что не отражает CSS. Если вы передаете дизайн разработчику или создаете его самостоятельно, вам необходимо определить либо значение жесткого пикселя, либо значение rem/em (например, -0,1em).</p>
-  <a href={storybook0009} className="story storybook-link" target='_blank' rel="noreferrer">
-    <img src={storybook0009} alt="Оптимизация интервала между буквами для отображаемого текста" className="w-2/3" />
-  </a>
-</div>
-
-<style>{styles}</style>
+    <TypographyElement variant="text-main" className="mb-4">Для стилизации текста можно использовать как встроенные
+        стили Tailwind CSS, так и компонент <code>Typography</code></TypographyElement>
+    <p className="flex items-center gap-2">[Документация компонента
+        Typography](?path=/docs/components-ui-typography--docs)</p>
+</Unstyled>

@@ -3,8 +3,31 @@ import avatar1 from '@/stories/assets/avatars/avatar-1.jpg'
 import avatar4 from '@/stories/assets/avatars/avatar-4.jpg'
 import { UserIcon } from '@heroicons/vue/24/outline/index.js'
 import { BellIcon } from '@heroicons/vue/16/solid/index.js'
+import TypographyElement from '@/components/ui/TypographyElement.vue'
+import themeConfig from '../../configs/themeConfig.js'
+import colors from 'tailwindcss/colors'
 
 const sizes = AvatarBasic.props.size.array
+const variants = AvatarBasic.props.variant.array
+const tailwindColors = Object.keys(colors).filter(
+  (color) =>
+    ![
+      'inherit',
+      'black',
+      'white',
+      'current',
+      'transparent',
+      'lightBlue',
+      'warmGray',
+      'trueGray',
+      'coolGray',
+      'blueGray'
+    ].includes(color)
+)
+const main = themeConfig.colors.main.map((color) => color.name)
+const states = themeConfig.colors.states.map((color) => color.name)
+const secondary = themeConfig.colors.secondary.map((color) => color.name)
+
 const iconSize = {
   4: 'h-3 w-3',
   6: 'h-4 w-4',
@@ -97,18 +120,85 @@ _Avatar.args = {
   disabled: true
 }
 
+export const AvatarVariants = {
+  name: 'Варианты аватаров без изображения (только текст)',
+  render: (args) => ({
+    components: { AvatarBasic, TypographyElement },
+    setup() {
+      return { args, main, states, secondary, tailwindColors, variants }
+    },
+    template: `
+      <div v-for="variant in variants" :key="variant" class="flex flex-col gap-8 mt-10">
+        <TypographyElement variant="h6" className="mt-1">
+          variant = {{ variant }}
+        </TypographyElement>
+        <TypographyElement variant="text-main" className="mt-1">
+          Основные
+        </TypographyElement>
+        <div class="grid grid-cols-6 gap-8">
+        <div v-for="color in main" :key="color" class="flex flex-col items-center gap-1">
+          <AvatarBasic :size="12" :variant="variant" :color="color" v-bind="args"/>
+          <TypographyElement variant="label" className="mt-1">
+            color = {{ color }}
+          </TypographyElement>
+        </div>
+        </div>
+        <TypographyElement variant="text-main" className="mt-1">
+          Состояния
+        </TypographyElement>
+        <div class="grid grid-cols-6 gap-8">
+          <div v-for="color in states" :key="color" class="flex flex-col items-center gap-1">
+            <AvatarBasic :size="12" :variant="variant" :color="color" v-bind="args"/>
+            <TypographyElement variant="label" className="mt-1">
+              color = {{ color }}
+            </TypographyElement>
+          </div>
+        </div>
+        <TypographyElement variant="text-main" className="mt-1">
+          Вторичные
+        </TypographyElement>
+        <div class="grid grid-cols-6 gap-8">
+          <div v-for="color in secondary" :key="color" class="flex flex-col items-center gap-1">
+            <AvatarBasic :size="12" :variant="variant" :color="color" v-bind="args"/>
+            <TypographyElement variant="label" className="mt-1">
+              color = {{ color }}
+            </TypographyElement>
+          </div>
+        </div>
+        <TypographyElement variant="text-main" className="mt-1">
+          Цвета Tailwind
+        </TypographyElement>
+        <div class="grid grid-cols-6 gap-8">
+          <div v-for="color in tailwindColors" :key="color" class="flex flex-col items-center gap-1">
+            <AvatarBasic :size="12" :variant="variant" :color="color" v-bind="args"/>
+            <TypographyElement variant="label" className="mt-1">
+              color = {{ color }}
+            </TypographyElement>
+          </div>
+        </div>
+      </div>`
+  }),
+  args: {
+    label: 'ИИ',
+    title: 'Иванова И.И.',
+    disabled: true
+  }
+}
+
 export const AvatarSizes = {
   name: 'Размеры аватаров с изображением',
   render: (args) => ({
-    components: { AvatarBasic },
+    components: { AvatarBasic, TypographyElement },
     setup() {
       return { args, sizes }
     },
     template: `
-          <div class="flex flex-wrap gap-8">
+          <div class="grid grid-cols-3 gap-8">
             <div v-for="size in sizes" :key="size" class="flex flex-col items-center gap-1">
               <AvatarBasic :size="size" v-bind="args"/>
-              <span class="text-sm text-gray-500">size = {{ size }}</span>
+              <TypographyElement variant="label" className="mt-1">
+                size = {{ size }}
+              </TypographyElement>
             </div>
           </div>`
   }),
@@ -123,15 +213,17 @@ export const AvatarSizes = {
 export const AvatarLabelSizes = {
   name: 'Размеры аватаров без изображения (только текст)',
   render: (args) => ({
-    components: { AvatarBasic },
+    components: { AvatarBasic, TypographyElement },
     setup() {
       return { args, sizes }
     },
     template: `
-          <div class="flex flex-wrap gap-8">
+          <div class="grid grid-cols-3 gap-8">
             <div v-for="size in sizes" :key="size" class="flex flex-col items-center gap-1">
               <AvatarBasic :size="size" v-bind="args"/>
-              <span class="text-sm text-gray-500">size = {{ size }}</span>
+              <TypographyElement variant="label" className="mt-1">
+                size = {{ size }}
+              </TypographyElement>
             </div>
           </div>`
   }),
@@ -145,20 +237,24 @@ export const AvatarLabelSizes = {
 export const AvatarIconSizes = {
   name: 'Размеры аватаров без изображения (со значком)',
   render: (args) => ({
-    components: { AvatarBasic, UserIcon },
+    components: { AvatarBasic, UserIcon, TypographyElement },
     setup() {
       return { args, sizes, iconSize }
     },
     template: `
-          <div class="flex flex-wrap gap-8">
+          <div class="grid grid-cols-3 gap-8">
             <div v-for="size in sizes" :key="size" class="flex flex-col items-center gap-1">
               <AvatarBasic :size="size" v-bind="args">
                 <template #icon>
                   <UserIcon :class="iconSize[size]"/>
                 </template>
               </AvatarBasic>
-              <span class="text-sm text-gray-500">size = {{ size }}</span>
-              <span class="text-sm text-gray-500">{{ iconSize[size] }}</span>
+              <TypographyElement variant="label" className="mt-1">
+                size = {{ size }}
+              </TypographyElement>
+              <TypographyElement variant="label" className="mt-1">
+                размер значка: {{ iconSize[size] }}
+              </TypographyElement>
             </div>
           </div>`
   }),
@@ -225,8 +321,8 @@ const AvatarLabelGroupTemplate = (args) => ({
       <div class="flex items-center gap-2.5">
         <AvatarBasic v-bind="args"></AvatarBasic>
         <div class="flex flex-col">
-          <span class="text-sm font-semibold text-gray-700">Иванова Ирина</span>
-          <span class="text-xs text-gray-500">ivanovaii@sample.com</span>
+          <span class="text-sm font-semibold text-grayscale-700">Иванова Ирина</span>
+          <span class="text-xs text-grayscale-500">ivanovaii@sample.com</span>
         </div>
       </div>
     `
@@ -252,8 +348,8 @@ const AvatarLabelGroupTemplate10 = (args) => ({
       <div class="flex items-center gap-3">
         <AvatarBasic v-bind="args"></AvatarBasic>
         <div class="flex flex-col">
-          <span class="text-sm font-semibold text-gray-700">Иванова Ирина</span>
-          <span class="text-sm text-gray-500">ivanovaii@sample.com</span>
+          <span class="text-sm font-semibold text-grayscale-700">Иванова Ирина</span>
+          <span class="text-sm text-grayscale-500">ivanovaii@sample.com</span>
         </div>
       </div>
     `
@@ -279,8 +375,8 @@ const AvatarLabelGroupTemplate12 = (args) => ({
       <div class="flex items-center gap-3">
         <AvatarBasic v-bind="args"></AvatarBasic>
         <div class="flex flex-col">
-          <span class="text-md font-semibold text-gray-700">Иванова Ирина</span>
-          <span class="text-md text-gray-500">ivanovaii@sample.com</span>
+          <span class="text-md font-semibold text-grayscale-700">Иванова Ирина</span>
+          <span class="text-md text-grayscale-500">ivanovaii@sample.com</span>
         </div>
       </div>
     `
@@ -306,8 +402,8 @@ const AvatarLabelGroupTemplate14 = (args) => ({
       <div class="flex items-center gap-4">
         <AvatarBasic v-bind="args"></AvatarBasic>
         <div class="flex flex-col">
-          <span class="text-lg font-semibold text-gray-700">Иванова Ирина</span>
-          <span class="text-md text-gray-500">ivanovaii@sample.com</span>
+          <span class="text-lg font-semibold text-grayscale-700">Иванова Ирина</span>
+          <span class="text-md text-grayscale-500">ivanovaii@sample.com</span>
         </div>
       </div>
     `
@@ -333,8 +429,8 @@ const AvatarLabelGroupStatusTemplate = (args) => ({
       <div class="flex items-center gap-2.5">
         <AvatarBasic v-bind="args"></AvatarBasic>
         <div class="flex flex-col">
-          <span class="text-sm font-semibold text-gray-700">Иванова Ирина</span>
-          <span class="text-xs text-gray-500">ivanovaii@sample.com</span>
+          <span class="text-sm font-semibold text-grayscale-700">Иванова Ирина</span>
+          <span class="text-xs text-grayscale-500">ivanovaii@sample.com</span>
         </div>
       </div>
     `
@@ -360,8 +456,8 @@ const AvatarLabelGroupStatusTemplate10 = (args) => ({
       <div class="flex items-center gap-3">
         <AvatarBasic v-bind="args"></AvatarBasic>
         <div class="flex flex-col">
-          <span class="text-sm font-semibold text-gray-700">Иванова Ирина</span>
-          <span class="text-sm text-gray-500">ivanovaii@sample.com</span>
+          <span class="text-sm font-semibold text-grayscale-700">Иванова Ирина</span>
+          <span class="text-sm text-grayscale-500">ivanovaii@sample.com</span>
         </div>
       </div>
     `
@@ -387,8 +483,8 @@ const AvatarLabelGroupStatusTemplate12 = (args) => ({
       <div class="flex items-center gap-3">
         <AvatarBasic v-bind="args"></AvatarBasic>
         <div class="flex flex-col">
-          <span class="text-md font-semibold text-gray-700">Иванова Ирина</span>
-          <span class="text-md text-gray-500">ivanovaii@sample.com</span>
+          <span class="text-md font-semibold text-grayscale-700">Иванова Ирина</span>
+          <span class="text-md text-grayscale-500">ivanovaii@sample.com</span>
         </div>
       </div>
     `
@@ -414,8 +510,8 @@ const AvatarLabelGroupStatusTemplate14 = (args) => ({
       <div class="flex items-center gap-4">
         <AvatarBasic v-bind="args"></AvatarBasic>
         <div class="flex flex-col">
-          <span class="text-lg font-semibold text-gray-700">Иванова Ирина</span>
-          <span class="text-md text-gray-500">ivanovaii@sample.com</span>
+          <span class="text-lg font-semibold text-grayscale-700">Иванова Ирина</span>
+          <span class="text-md text-grayscale-500">ivanovaii@sample.com</span>
         </div>
       </div>
     `

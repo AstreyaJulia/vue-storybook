@@ -1,6 +1,5 @@
 import { Canvas, Controls, Meta, Source, Title } from "@storybook/blocks";
 import * as AvatarStories from "./AvatarBasic.stories.js";
-import { styles } from "./styles/mdxStorybookStyes";
 
 <Meta of={AvatarStories} />
 <Title>Аватар</Title>
@@ -13,6 +12,9 @@ import { styles } from "./styles/mdxStorybookStyes";
 
 <h6 className="story storybook-docs-h6">Код компонента</h6>
 <Source of={AvatarStories._Avatar} />
+
+<p className="story storybook-caption mb-5">{AvatarStories.AvatarVariants.name}</p>
+<Canvas of={AvatarStories.AvatarVariants} />
 
 <h3 className="story storybook-docs-h3 mb-5">Размеры аватаров</h3>
 <p className="story storybook-caption mb-5">{AvatarStories.AvatarSizes.name}</p>
@@ -58,4 +60,3 @@ import { styles } from "./styles/mdxStorybookStyes";
 
 <p className="story storybook-caption mb-5">{AvatarStories.AvatarStatusIcon2.storyName}</p>
 <Canvas of={AvatarStories.AvatarStatusIcon2} />
-<style>{styles}</style>

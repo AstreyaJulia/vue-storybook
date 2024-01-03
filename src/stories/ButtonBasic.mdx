@@ -1,139 +1,66 @@
-import { Canvas, Controls, Meta, Source, Title } from '@storybook/blocks'
+import {Canvas, Controls, Meta, Source, Unstyled} from '@storybook/blocks'
 import * as ButtonStories from './ButtonBasic.stories.js'
-import { styles } from './styles/mdxStorybookStyes'
-
-import storybook0010 from './assets/images/storybook0010.jpg'
-import storybook0011 from './assets/images/storybook0011.jpg'
-import storybook0012 from './assets/images/storybook0012.jpg'
-import storybook0013 from './assets/images/storybook0013.jpg'
-import storybook0014 from './assets/images/storybook0014.jpg'
-import storybook0015 from './assets/images/storybook0015.jpg'
-import storybook0016 from './assets/images/storybook0016.jpg'
-import storybook0017 from './assets/images/storybook0017.jpg'
+import TypographyElement from "@/components/ui/TypographyElement.vue";
 
 <Meta of={ButtonStories} />
-<Title>Кнопка</Title>
 
-<Canvas of={ButtonStories._Button} />
-<h6 className="story storybook-docs-h6">Параметры</h6>
-<Controls />
+<Unstyled>
+    <TypographyElement variant="h1">Кнопка</TypographyElement>
+    <Canvas of={ButtonStories._Button} />
+    <TypographyElement variant="h6">Параметры</TypographyElement>
+    <Controls />
+    <TypographyElement variant="h6">Код компонента</TypographyElement>
+    <Source of={ButtonStories._Button} />
+    <TypographyElement variant="blockquote" className="mb-6">❗️ Обязательно необходимо указывать для компонента кнопки атрибут
+        `type={button | submit | reset}`</TypographyElement>
 
-<h6 className="story storybook-docs-h6">Код компонента</h6>
-<Source of={ButtonStories._Button} />
+    <TypographyElement variant="h3" className="mb-6">Главная кнопка (Primary)</TypographyElement>
+    <TypographyElement variant="text-main" className="mb-6">Основное действие на экране. Акцентного цвета. Может быть только одна на экране.</TypographyElement>
 
-<blockquote>❗️ Обязательно необходимо указывать для компонента кнопки атрибут
-    `type={button | submit | reset}`</blockquote>
+    <TypographyElement variant="h6">{ButtonStories.Primary.name}</TypographyElement>
+    <Canvas of={ButtonStories.Primary} />
 
-<h3 className="story storybook-docs-h3">Главная кнопка (Primary)</h3>
+    <TypographyElement variant="h6">{ButtonStories.PrimaryDisabled.name}</TypographyElement>
+    <Canvas of={ButtonStories.PrimaryDisabled} />
 
-<p className="story storybook-text">Основное действие на экране. Акцентного цвета.</p>
-<p className="story storybook-text">Может быть только одна на экране.</p>
+    <TypographyElement variant="h6">{ButtonStories.PrimaryLoading.name}</TypographyElement>
+    <Canvas of={ButtonStories.PrimaryLoading} />
 
-<h6 className="story storybook-docs-h6">{ButtonStories.Primary.name}</h6>
-<Canvas of={ButtonStories.Primary} />
+    <TypographyElement variant="h3" className="mb-6">Стандартная кнопка (по-умолчанию, default)</TypographyElement>
+    <TypographyElement variant="h6" className="mb-4">{ButtonStories.Default.name}</TypographyElement>
+    <TypographyElement variant="text-main" className="mb-6">По-умолчанию.</TypographyElement>
+    <Canvas of={ButtonStories.Default} />
 
-<h6 className="story storybook-docs-h6">{ButtonStories.PrimaryDisabled.name}</h6>
-<Canvas of={ButtonStories.PrimaryDisabled} />
+    <TypographyElement variant="h6" className="mb-6">{ButtonStories.DefaultDisabled.name}</TypographyElement>
+    <Canvas of={ButtonStories.DefaultDisabled} />
 
-<h6 className="story storybook-docs-h6">{ButtonStories.PrimaryLoading.name}</h6>
-<Canvas of={ButtonStories.PrimaryLoading} />
+    <TypographyElement variant="h6" className="mb-6">{ButtonStories.WithLeftIconLoading.name}</TypographyElement>
+    <Canvas of={ButtonStories.WithLeftIconLoading} />
 
-<h3 className="story storybook-docs-h3">Стандартная кнопка (по-умолчанию, default)</h3>
+    <TypographyElement variant="h6" className="mb-6">{ButtonStories.WithLeftIcon.name}</TypographyElement>
+    <TypographyElement variant="text-main" className="mb-6">SVG или другой формат в теге `<img />`. Размеры значка, цвет атрибутов `stroke` и `fill` не задаются, они заданы в самой кнопке.</TypographyElement>
+    <Canvas of={ButtonStories.WithLeftIcon} />
 
-<h6 className="story storybook-docs-h6">{ButtonStories.Default.name}</h6>
-<p className="story storybook-text">По-умолчанию.</p>
-<Canvas of={ButtonStories.Default} />
+    <TypographyElement variant="h6" className="mb-6">{ButtonStories.WithRightIcon.name}</TypographyElement>
+    <Canvas of={ButtonStories.WithRightIcon} />
 
-<h6 className="story storybook-docs-h6">{ButtonStories.DefaultDisabled.name}</h6>
-<Canvas of={ButtonStories.DefaultDisabled} />
+    <TypographyElement variant="h6" className="mb-6">{ButtonStories.OnlyIcon.name}</TypographyElement>
+    <TypographyElement variant="blockquote" className="mb-6">❗️ Для кнопок без текста обязательно необходимо указывать атрибут `title='Описание действия'`.</TypographyElement>
+    <Canvas of={ButtonStories.OnlyIcon} />
 
-<h6 className="story storybook-docs-h6">{ButtonStories.WithLeftIconLoading.name}</h6>
-<Canvas of={ButtonStories.WithLeftIconLoading} />
+    <TypographyElement variant="h3" className="mb-6">Кнопка третьего порядка (tertiary)</TypographyElement>
+    <TypographyElement variant="h6" className="mb-6">{ButtonStories.Tertiary.name}</TypographyElement>
+    <Canvas of={ButtonStories.Tertiary} />
 
-<h6 className="story storybook-docs-h6">{ButtonStories.WithLeftIcon.name}</h6>
-<p className="story storybook-text">SVG или другой формат в теге `<img />`. Размеры значка, цвет атрибутов `stroke` и `fill` не задаются, они заданы в самой кнопке.</p>
-<Canvas of={ButtonStories.WithLeftIcon} />
+    <TypographyElement variant="h3" className="mb-6">Кнопка-ссылка (link)</TypographyElement>
+    <TypographyElement variant="text-main" className="mb-6">Обозначение перехода на страницу</TypographyElement>
+    <TypographyElement variant="h6" className="mb-6">{ButtonStories.Link.name}</TypographyElement>
+    <Canvas of={ButtonStories.Link} />
 
-<h6 className="story storybook-docs-h6">{ButtonStories.WithRightIcon.name}</h6>
-<Canvas of={ButtonStories.WithRightIcon} />
+    <TypographyElement variant="h3" className="mb-6">Кнопка, обозначающая разрушительные действия (destructive)</TypographyElement>
+    <TypographyElement variant="h6" className="mb-6">{ButtonStories.Destructive.name}</TypographyElement>
+    <Canvas of={ButtonStories.Destructive} />
 
-<h6 className="story storybook-docs-h6">{ButtonStories.OnlyIcon.name}</h6>
-<blockquote>❗️ Для кнопок без текста обязательно необходимо указывать атрибут `title='Описание действия'`.</blockquote>
-<Canvas of={ButtonStories.OnlyIcon} />
-
-<h3 className="story storybook-docs-h3">Кнопка третьего порядка (tertiary)</h3>
-<h6 className="story storybook-docs-h6">{ButtonStories.Tertiary.name}</h6>
-<Canvas of={ButtonStories.Tertiary} />
-
-<h3 className="story storybook-docs-h3">Кнопка-ссылка (link)</h3>
-<p className="story storybook-text">Обозначение перехода на страницу</p>
-<h6 className="story storybook-docs-h6">{ButtonStories.Link.name}</h6>
-<Canvas of={ButtonStories.Link} />
-
-<h3 className="story storybook-docs-h3">Кнопка, обозначающая разрушительные действия (destructive)</h3>
-<h6 className="story storybook-docs-h6">{ButtonStories.Destructive.name}</h6>
-<Canvas of={ButtonStories.Destructive} />
-
-<h6 className="story storybook-docs-h6">{ButtonStories.DestructiveLoading.name}</h6>
-<Canvas of={ButtonStories.DestructiveLoading} />
-
-<div className="pt-16">
-    <h3 className="story storybook-docs-h3">Кнопки должны выглядеть как кнопки</h3>
-    <p className="story storybook-text">Кнопка — это интерактивный элемент, который приводит к описанному в ней действию. Они
-        являются одними из наиболее важных компонентов современного дизайна пользовательского интерфейса, поэтому важно
-        сделать все правильно.</p>
-    <p className="story storybook-text">Самое важное правило при разработке кнопки — она должна выглядеть как кнопка. Это должно
-        быть очевидно.</p>
-    <p className="story storybook-text">Пользователи знакомы с тем, как выглядят кнопки и как они себя ведут. Чем больше кнопка
-        «похожа» на кнопку, тем легче ее быстро и подсознательно обнаружить. Вот почему прямоугольники или прямоугольники с
-        закругленными углами всегда являются безопасным выбором:</p>
-    <a href={storybook0010} className="story storybook-link" target='_blank' rel="noreferrer">
-        <img src={storybook0010} alt="Кнопки должны выглядеть как кнопки" className="w-2/3" />
-    </a>
-    <p className="story storybook-text">Как только вы начинаете слишком сильно что-то менять, кнопки теряют свою действенность,
-        и пользователям приходится активно искать действие:</p>
-    <a href={storybook0011} className="story storybook-link" target='_blank' rel="noreferrer">
-        <img src={storybook0011} alt="Кнопки должны выглядеть как кнопки" className="w-2/3" />
-    </a>
-</div>
-
-<div className="pt-16">
-    <h3 className="story storybook-docs-h3">Не забывайте об иерархии</h3>
-    <p className="story storybook-text">Когда на странице несколько действий, важно расположить их в четкой иерархии. Каждое
-        действие на странице находится где-то в иерархии важности.</p>
-    <p className="story storybook-text">Большинство компонентов и страниц имеют только одно «основное» действие. Это основное
-        действие, которое, скорее всего, предпримет пользователь (или которого хочет от него дизайнер). Остальные действия
-        «вторичны». На странице может быть несколько дополнительных действий. Как правило, полезно различать их и по
-        возможности организовывать в последовательную иерархию. Возможно, вам даже понадобится третье «третичное» или даже
-        четвертое «четвертичное» действие.</p>
-    <p className="story storybook-text">Стиль кнопки в первую очередь используется для того, чтобы отличать более важные
-        действия от менее важных — основные действия должны быть вариантами по умолчанию и наиболее очевидными:</p>
-    <a href={storybook0012} className="story storybook-link" target='_blank' rel="noreferrer">
-        <img src={storybook0012} alt="Не забывайте об иерархии" className="w-2/3" />
-    </a>
-    <a href={storybook0013} className="story storybook-link" target='_blank' rel="noreferrer">
-        <img src={storybook0013} alt="Не забывайте об иерархии" className="w-2/3" />
-    </a>
-    <p className="story storybook-text">Без четкой иерархии, как визуально, так и структурно, нет визуальной подсказки, и пользователь вынужден читать и более тщательно обдумывать, что делает каждое действие. Это создает трения и разочаровывает:</p>
-    <a href={storybook0014} className="story storybook-link" target='_blank' rel="noreferrer">
-        <img src={storybook0014} alt="Не забывайте об иерархии" className="w-2/3" />
-    </a>
-</div>
-
-<div className="pt-16">
-    <h3 className="story storybook-docs-h3">Разрушительные действия</h3>
-    <p className="story storybook-text">Существует распространенное мнение, что все «негативные» или «деструктивные» действия должны быть отмечены большой красной кнопкой. В большинстве случаев это не совсем необходимо, и дизайн может выглядеть перегруженным:</p>
-    <a href={storybook0015} className="story storybook-link" target='_blank' rel="noreferrer">
-        <img src={storybook0015} alt="Разрушительные действия" className="w-2/3" />
-    </a>
-    <p className="story storybook-text">В большинстве случаев дополнительная кнопка поможет:</p>
-    <a href={storybook0016} className="story storybook-link" target='_blank' rel="noreferrer">
-        <img src={storybook0016} alt="Разрушительные действия" className="w-2/3" />
-    </a>
-    <p className="story storybook-text">При этом, если конкретное деструктивное действие является основным, обычно рекомендуется визуально пометить его с помощью «деструктивного» варианта кнопки. Это дает понять пользователю, что он собирается предпринять весьма важное действие:</p>
-    <a href={storybook0017} className="story storybook-link" target='_blank' rel="noreferrer">
-        <img src={storybook0017} alt="Разрушительные действия" className="w-2/3" />
-    </a>
-</div>
-
-<style>{styles}</style>
+    <TypographyElement variant="h6" className="mb-6">{ButtonStories.DestructiveLoading.name}</TypographyElement>
+    <Canvas of={ButtonStories.DestructiveLoading} />
+</Unstyled>

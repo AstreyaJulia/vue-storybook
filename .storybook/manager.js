@@ -1,5 +1,17 @@
 import { addons } from "@storybook/manager-api";
-import theme from "./theme.js";
+
+import {dark, light} from "./storybook-themes.js";
+
+const getPreferredColorScheme = () => {
+    if (!globalThis || !globalThis.matchMedia) return 'light';
+
+    const isDarkThemePreferred = globalThis.matchMedia(
+        '(prefers-color-scheme: dark)'
+    ).matches;
+    if (isDarkThemePreferred) return 'dark';
+
+    return 'light';
+};
 
 addons.setConfig({
     isFullscreen: false, // показывать содержимое истории на полный экран
@@ -10,5 +22,5 @@ addons.setConfig({
     enableShortcuts: true, // вкл/ выкл сочетания клавиш
     isToolshown: true, // показать / спрятать панель инструментов
     selectedPanel: undefined, // id выбранной панели дополнения
-    theme: theme, // настройки темы
+    theme: getPreferredColorScheme() === 'dark' ? dark : light, // настройки темы
 });

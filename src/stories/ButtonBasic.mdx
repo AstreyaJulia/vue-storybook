@@ -1,66 +1,72 @@
 import {Canvas, Controls, Meta, Source, Unstyled} from '@storybook/blocks'
 import * as ButtonStories from './ButtonBasic.stories.js'
 import TypographyElement from "@/components/ui/TypographyElement.vue";
+import StoryHeader from "@/stories/assets/components/StoryHeader.vue";
 
-<Meta of={ButtonStories} />
+<Meta of={ButtonStories}/>
 
 <Unstyled>
-    <TypographyElement variant="h1">Кнопка</TypographyElement>
-    <Canvas of={ButtonStories._Button} />
+    <StoryHeader header="Кнопка" tags={["small", "default"]}>
+        <div className="flex flex-col gap-y-6">
+            <TypographyElement variant="text-secondary">Кнопка запускает действие или событие.</TypographyElement>
+            <TypographyElement variant="text-secondary">Используйте кнопки для важных действий, таких как отправка
+                ответа, подтверждение изменения или переход к следующему шагу. Если вам нужно перейти в другое место,
+                попробуйте использовать ссылку.</TypographyElement>
+            <TypographyElement variant="text-secondary">Кнопка-переключатель — это поведение с двумя состояниями,
+                которое переключает состояние между включенным и выключенным. Состояние покоя кнопки означает
+                «выключено», а выбранное состояние — «включено».</TypographyElement>
+        </div>
+    </StoryHeader>
+
+    <Canvas of={ButtonStories._Button}/>
     <TypographyElement variant="h6">Параметры</TypographyElement>
-    <Controls />
+    <Controls/>
     <TypographyElement variant="h6">Код компонента</TypographyElement>
-    <Source of={ButtonStories._Button} />
-    <TypographyElement variant="blockquote" className="mb-6">❗️ Обязательно необходимо указывать для компонента кнопки атрибут
+    <Source of={ButtonStories._Button}/>
+    <TypographyElement variant="blockquote" className="mb-6">❗️ Обязательно необходимо указывать для компонента кнопки
+        атрибут
         `type={button | submit | reset}`</TypographyElement>
 
-    <TypographyElement variant="h3" className="mb-6">Главная кнопка (Primary)</TypographyElement>
-    <TypographyElement variant="text-main" className="mb-6">Основное действие на экране. Акцентного цвета. Может быть только одна на экране.</TypographyElement>
+    <TypographyElement variant="h6">{ButtonStories.ButtonSizes.name}</TypographyElement>
+    <Canvas of={ButtonStories.ButtonSizes}/>
 
-    <TypographyElement variant="h6">{ButtonStories.Primary.name}</TypographyElement>
-    <Canvas of={ButtonStories.Primary} />
+    <TypographyElement variant="h4" className="mb-6">Главная кнопка (Primary)</TypographyElement>
+    <TypographyElement variant="text-main" className="mb-6">Основное действие на экране. Акцентного цвета. Может быть
+        только одна на экране.</TypographyElement>
 
-    <TypographyElement variant="h6">{ButtonStories.PrimaryDisabled.name}</TypographyElement>
-    <Canvas of={ButtonStories.PrimaryDisabled} />
+    <TypographyElement variant="h6">{ButtonStories.PrimaryStates.name}</TypographyElement>
+    <Canvas of={ButtonStories.PrimaryStates}/>
 
-    <TypographyElement variant="h6">{ButtonStories.PrimaryLoading.name}</TypographyElement>
-    <Canvas of={ButtonStories.PrimaryLoading} />
+    <TypographyElement variant="h4" className="mb-6">Стандартная кнопка (по-умолчанию, default)</TypographyElement>
+    <TypographyElement variant="h6">{ButtonStories.DefaultStates.name}</TypographyElement>
+    <Canvas of={ButtonStories.DefaultStates}/>
 
-    <TypographyElement variant="h3" className="mb-6">Стандартная кнопка (по-умолчанию, default)</TypographyElement>
-    <TypographyElement variant="h6" className="mb-4">{ButtonStories.Default.name}</TypographyElement>
-    <TypographyElement variant="text-main" className="mb-6">По-умолчанию.</TypographyElement>
-    <Canvas of={ButtonStories.Default} />
+    <TypographyElement variant="h6">{ButtonStories.WithLeftIconStates.name}</TypographyElement>
+    <TypographyElement variant="text-main">SVG или другой формат в теге `<img/>`. Размеры значка, цвет атрибутов
+        `stroke` и `fill` не задаются, они заданы в самой кнопке.</TypographyElement>
+    <Canvas of={ButtonStories.WithLeftIconStates}/>
 
-    <TypographyElement variant="h6" className="mb-6">{ButtonStories.DefaultDisabled.name}</TypographyElement>
-    <Canvas of={ButtonStories.DefaultDisabled} />
+    <TypographyElement variant="h6">{ButtonStories.WithRightIconStates.name}</TypographyElement>
+    <TypographyElement variant="text-main">SVG или другой формат в теге `<img/>`. Размеры значка, цвет атрибутов
+        `stroke` и `fill` не задаются, они заданы в самой кнопке.</TypographyElement>
+    <Canvas of={ButtonStories.WithRightIconStates}/>
 
-    <TypographyElement variant="h6" className="mb-6">{ButtonStories.WithLeftIconLoading.name}</TypographyElement>
-    <Canvas of={ButtonStories.WithLeftIconLoading} />
+    <TypographyElement variant="h6" className="mb-6">{ButtonStories.OnlyIconStates.name}</TypographyElement>
+    <TypographyElement variant="blockquote">❗️ Для кнопок без текста обязательно необходимо указывать атрибут
+        `title='Описание действия'`.</TypographyElement>
+    <Canvas of={ButtonStories.OnlyIconStates}/>
 
-    <TypographyElement variant="h6" className="mb-6">{ButtonStories.WithLeftIcon.name}</TypographyElement>
-    <TypographyElement variant="text-main" className="mb-6">SVG или другой формат в теге `<img />`. Размеры значка, цвет атрибутов `stroke` и `fill` не задаются, они заданы в самой кнопке.</TypographyElement>
-    <Canvas of={ButtonStories.WithLeftIcon} />
+    <TypographyElement variant="h4" className="mb-6">Кнопка третьего порядка (tertiary)</TypographyElement>
+    <TypographyElement variant="h6">{ButtonStories.TertiaryStates.name}</TypographyElement>
+    <Canvas of={ButtonStories.TertiaryStates}/>
 
-    <TypographyElement variant="h6" className="mb-6">{ButtonStories.WithRightIcon.name}</TypographyElement>
-    <Canvas of={ButtonStories.WithRightIcon} />
-
-    <TypographyElement variant="h6" className="mb-6">{ButtonStories.OnlyIcon.name}</TypographyElement>
-    <TypographyElement variant="blockquote" className="mb-6">❗️ Для кнопок без текста обязательно необходимо указывать атрибут `title='Описание действия'`.</TypographyElement>
-    <Canvas of={ButtonStories.OnlyIcon} />
-
-    <TypographyElement variant="h3" className="mb-6">Кнопка третьего порядка (tertiary)</TypographyElement>
-    <TypographyElement variant="h6" className="mb-6">{ButtonStories.Tertiary.name}</TypographyElement>
-    <Canvas of={ButtonStories.Tertiary} />
-
-    <TypographyElement variant="h3" className="mb-6">Кнопка-ссылка (link)</TypographyElement>
+    <TypographyElement variant="h4" className="mb-6">Кнопка-ссылка (link)</TypographyElement>
     <TypographyElement variant="text-main" className="mb-6">Обозначение перехода на страницу</TypographyElement>
-    <TypographyElement variant="h6" className="mb-6">{ButtonStories.Link.name}</TypographyElement>
-    <Canvas of={ButtonStories.Link} />
+    <TypographyElement variant="h6">{ButtonStories.LinkStates.name}</TypographyElement>
+    <Canvas of={ButtonStories.LinkStates}/>
 
-    <TypographyElement variant="h3" className="mb-6">Кнопка, обозначающая разрушительные действия (destructive)</TypographyElement>
-    <TypographyElement variant="h6" className="mb-6">{ButtonStories.Destructive.name}</TypographyElement>
-    <Canvas of={ButtonStories.Destructive} />
-
-    <TypographyElement variant="h6" className="mb-6">{ButtonStories.DestructiveLoading.name}</TypographyElement>
-    <Canvas of={ButtonStories.DestructiveLoading} />
+    <TypographyElement variant="h4" className="mb-6">Кнопка, обозначающая разрушительные действия
+        (destructive)</TypographyElement>
+    <TypographyElement variant="h6">{ButtonStories.DestructiveStates.name}</TypographyElement>
+    <Canvas of={ButtonStories.DestructiveStates}/>
 </Unstyled>

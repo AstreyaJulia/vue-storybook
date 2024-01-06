@@ -25,7 +25,7 @@ export default {
   parameters: {
     layout: 'centered',
     slots: {
-      children: 'Дополнительные элементы'
+      default: 'Дополнительные элементы'
     }
   }
 }

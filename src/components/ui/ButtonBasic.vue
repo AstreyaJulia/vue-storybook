@@ -21,11 +21,11 @@ const variants = {
   default:
     'shadow-sm dark:shadow-none border border-grayscale-300 dark:border-grayscale-700 hover:border-grayscale-400 dark:hover:border-grayscale-600 bg-grayscale-50 dark:bg-grayscale-900 hover:bg-grayscale-100 dark:hover:bg-grayscale-800 text-grayscale-800 dark:text-grayscale-200 fill-grayscale-800 dark:fill-grayscale-200 hover:text-grayscale-900 dark:hover:text-grayscale-100 hover:fill-grayscale-900 dark:hover:fill-grayscale-100 focus:ring-4 focus:ring-grayscale-300/50 disabled:bg-grayscale-50 dark:disabled:bg-grayscale-950 disabled:hover:bg-grayscale-50 dark:disabled:hover:bg-grayscale-950 disabled:border-grayscale-100 dark:disabled:border-grayscale-800 disabled:hover:border-grayscale-100 dark:disabled:hover:border-grayscale-800 disabled:text-grayscale-300 dark:disabled:text-grayscale-800 disabled:fill-grayscale-300 dark:disabled:fill-grayscale-500',
   primary:
-    'shadow-sm dark:shadow-none border border-brand-600 dark:border-brand-500 bg-brand-600 dark:bg-brand-500 text-white fill-white hover:bg-brand-700 dark:hover:bg-brand-600 hover:border-brand-700 dark:hover:border-brand-600 focus:ring-4 focus:ring-brand-300/50 disabled:bg-brand-200 dark:disabled:bg-brand-800 disabled:border-brand-200 dark:disabled:border-brand-800 disabled:hover:bg-brand-200 dark:disabled:hover:bg-brand-800 disabled:text-grayscale-100 dark:disabled:text-grayscale-600 disabled:fill-grayscale-100 dark:disabled:fill-grayscale-600',
+    'shadow-sm dark:shadow-none border border-brand-600 dark:border-brand-500 bg-brand-600 dark:bg-brand-500 text-white fill-white hover:bg-brand-700 dark:hover:bg-brand-600 hover:border-brand-700 dark:hover:border-brand-600 focus:ring-4 disabled:focus:ring-none focus:ring-brand-300/50 disabled:bg-brand-200 dark:disabled:bg-brand-800 disabled:border-brand-200 dark:disabled:border-brand-800 disabled:hover:bg-brand-200 dark:disabled:hover:bg-brand-800 disabled:text-grayscale-100 dark:disabled:text-grayscale-600 disabled:fill-grayscale-100 dark:disabled:fill-grayscale-600',
   destructive:
     'shadow-sm dark:shadow-none border border-error-500 dark:border-error-400 hover:border-error-600 dark:hover:border-error-500 bg-error-100 dark:bg-error-800 hover:bg-error-200 dark:hover:bg-error-900 text-error-700 dark:text-error-100 fill-error-700 dark:fill-error-100 focus:ring-4 focus:ring-error-300/50 disabled:bg-error-50 dark:disabled:bg-error-900 disabled:hover:bg-error-50 dark:disabled:hover:bg-error-900 disabled:border-error-100 dark:disabled:border-error-950 disabled:hover:border-error-100 dark:disabled:hover:border-error-950 disabled:text-error-300 dark:disabled:text-error-700 disabled:fill-error-300 dark:disabled:fill-error-700',
   tertiary:
-    'bg-transparent border border-transparent text-grayscale-700 dark:text-grayscale-100 fill-grayscale-700 hover:text-grayscale-800 dark:hover:text-grayscale-200 hover:fill-grayscale-800 dark:hover:fill-grayscale-200 focus:ring-4 focus:ring-grayscale-300/50 disabled:text-grayscale-200 dark:disabled:text-grayscale-700 disabled:fill-grayscale-200 dark:disabled:fill-grayscale-700',
+    'bg-transparent border border-transparent text-grayscale-700 dark:text-grayscale-100 fill-grayscale-700 hover:text-grayscale-800 dark:hover:text-grayscale-200 hover:fill-grayscale-800 dark:hover:fill-grayscale-200 focus:ring-4 focus:ring-grayscale-300/50 disabled:text-grayscale-200 dark:disabled:text-grayscale-700 disabled:fill-grayscale-200 dark:disabled:fill-grayscale-700 disabled:bg-transparent dark:disabled:bg-transparent',
   link: 'bg-transparent border border-transparent text-brand-600 dark:text-brand-400 fill-brand-600 dark:fill-brand-400 hover:text-brand-800 dark:hover:text-brand-500 hover:fill-brand-800 dark:hover:fill-brand-500 focus:ring-4 focus:ring-brand-300/50 disabled:text-brand-200 dark:disabled:text-brand-800 disabled:fill-brand-200 dark:disabled:fill-brand-800'
 }
 
@@ -111,12 +111,6 @@ export default {
       },
       default: Object.keys(shapes.default)[0]
     },
-    /** **Дополнительный класс** */
-    className: {
-      type: String,
-      required: false,
-      default: ''
-    },
     /** **Индекс текущего элемента в группе кнопок** */
     groupIndex: {
       type: Number,
@@ -146,11 +140,11 @@ export default {
         [props.groupIndex !== -1 && props.groupIndex === props.totalItems - 1
           ? 'rounded-r-lg'
           : '']: true,
-        [props.groupIndex !== -1 ? 'focus:z-10 hover:z-10' : 'rounded-lg']: true,
-        [props.className]: true
+        [props.groupIndex !== -1 ? 'focus:z-10 hover:z-10' : 'rounded-lg']: true
       })),
       loaderClasses: computed(() => ({
-        'absolute inset-1/3 inset-y-0 animate-spin-slow': true,
+        'absolute inset-y-0 animate-spin-slow': true,
+        [props.shape === 'square' ? 'inset-0' : 'inset-1/3']: true,
         [props.size === 'small' ? 'h-5 w-5' : 'h-6 w-6']: true
       })),
       loaderSpinnerClasses: computed(() => ({

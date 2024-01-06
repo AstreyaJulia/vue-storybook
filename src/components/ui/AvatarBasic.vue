@@ -194,7 +194,6 @@ const statusSizes = {
 export default {
   name: 'Avatar-Basic',
 
-  slots: ['children', 'icon'],
   props: {
     /** **Текст аватара** */
     label: {
@@ -268,12 +267,6 @@ export default {
     isLoading: {
       type: Boolean,
       default: false
-    },
-    /** **Дополнительный класс** */
-    className: {
-      type: String,
-      required: false,
-      default: ''
     }
   },
 
@@ -310,8 +303,7 @@ export default {
         'relative items-center justify-center flex': true,
         [shapes[props.shape]]: true,
         [sizes[props.size]]: true,
-        [colors[props.variant][props.color]]: true,
-        [props.className]: true
+        [colors[props.variant][props.color]]: true
       })),
       notLoadingImage: computed(() => ({
         'shrink-0': true,

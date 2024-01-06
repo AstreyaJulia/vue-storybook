@@ -8,6 +8,7 @@ import { withThemeByClassName } from '@storybook/addon-themes'
 const preview = {
   parameters: {
     actions: { argTypesRegex: '^on[A-Z].*' },
+    layout: 'fullscreen',
     previewTabs: {
       'storybook/docs/panel': {
         index: -1,

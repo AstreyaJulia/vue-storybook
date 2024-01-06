@@ -95,12 +95,6 @@ export default {
       },
       required: true
     },
-    /** Дополнительный класс. */
-    className: {
-      type: String,
-      required: false,
-      default: ''
-    },
     textSize: {
       type: String,
       required: false,
@@ -125,8 +119,7 @@ export default {
       classes: computed(() => ({
         [variants[props.variant].basicClass]: true,
         [props.textSize || variants[props.variant].textSize]: true,
-        [props.textColor || variants[props.variant].textColor]: true,
-        [props.className]: true
+        [props.textColor || variants[props.variant].textColor]: true
       })),
       element: computed(() => variants[props.variant].element)
     }

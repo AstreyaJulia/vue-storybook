@@ -1,0 +1,41 @@
+import {Canvas, Controls, Meta, Source, Unstyled} from '@storybook/blocks'
+import * as BadgeBasic from './BadgeBasic.stories.js'
+import TypographyElement from "@/components/ui/TypographyElement.vue";
+import StoryHeader from "@/stories/assets/components/StoryHeader.vue";
+
+<Meta of={BadgeBasic}/>
+
+<Unstyled>
+    <StoryHeader header="Бейдж" tags={["small", "default"]}>
+        <TypographyElement variant="text-secondary">Значок — это визуальный индикатор, который сообщает о состоянии или
+            описании связанного компонента. Они используют короткий текст, цвет и значки для быстрого распознавания и
+            размещаются рядом с соответствующим контентом.</TypographyElement>
+    </StoryHeader>
+
+    <Canvas of={BadgeBasic._Badge}/>
+    <TypographyElement variant="h6">Параметры</TypographyElement>
+    <Controls/>
+    <TypographyElement variant="h6">Код компонента</TypographyElement>
+    <Source of={BadgeBasic._Badge}/>
+
+    <TypographyElement variant="h6">{BadgeBasic.BadgeShapes.name}</TypographyElement>
+    <Canvas of={BadgeBasic.BadgeShapes}/>
+
+    <TypographyElement variant="h6">{BadgeBasic.BadgeVariants.name}</TypographyElement>
+    <Canvas of={BadgeBasic.BadgeVariants}/>
+
+    <TypographyElement variant="h6">{BadgeBasic.BadgeWithStatus.name}</TypographyElement>
+    <Canvas of={BadgeBasic.BadgeWithStatus}/>
+
+    <TypographyElement variant="h6">{BadgeBasic.BadgeWithIcon.name}</TypographyElement>
+    <Canvas of={BadgeBasic.BadgeWithIcon}/>
+
+    <TypographyElement variant="h6">{BadgeBasic.BadgeInBadge.storyName}</TypographyElement>
+    <Canvas of={BadgeBasic.BadgeInBadge}/>
+
+    <TypographyElement variant="h6">{BadgeBasic.BadgeOutlineInBadge.storyName}</TypographyElement>
+    <Canvas of={BadgeBasic.BadgeOutlineInBadge}/>
+
+    <TypographyElement variant="h6">{BadgeBasic.BadgeWithDeleteButton.storyName}</TypographyElement>
+    <Canvas of={BadgeBasic.BadgeWithDeleteButton}/>
+</Unstyled>

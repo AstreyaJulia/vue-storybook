@@ -1,30 +1,13 @@
 <script>
-import { computed, reactive } from 'vue'
+import { computed } from 'vue'
 
 export default {
   name: 'Card-Body',
 
-  props: {
-    /** Дополнительный класс. */
-    className: {
-      type: String,
-      required: false,
-      default: ''
-    },
-    /** Дополнительные дочерние элементы. */
-    children: {
-      type: Node,
-      required: false
-    }
-  },
-
-  setup(props) {
-    props = reactive(props)
-
+  setup() {
     return {
       classes: computed(() => ({
-        'p-4': true,
-        [props.className]: true
+        'p-4': true
       }))
     }
   }

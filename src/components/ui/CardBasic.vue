@@ -26,12 +26,6 @@ export default {
       },
       default: Object.keys(variants)[0]
     },
-    /** Дополнительный класс. */
-    className: {
-      type: String,
-      required: false,
-      default: ''
-    },
     /** Дочерние элементы. */
     children: {
       type: Node,
@@ -45,8 +39,7 @@ export default {
     return {
       classes: computed(() => ({
         'rounded-lg': true,
-        [variants[props.variant]]: true,
-        [props.className]: true
+        [variants[props.variant]]: true
       }))
     }
   }

@@ -39,12 +39,6 @@ export default {
     isLoading: {
       type: Boolean,
       default: false
-    },
-    /** **Дополнительный класс** */
-    className: {
-      type: String,
-      required: false,
-      default: ''
     }
   },
 
@@ -59,8 +53,7 @@ export default {
     return {
       containerClass: computed(() => ({
         'isolate flex': true,
-        [avatarsSpace[props.size]]: true,
-        [props.className]: true
+        [avatarsSpace[props.size]]: true
       })),
       avatarZIndex: computed((key) => avatarsSplit.length - key),
       avatarsSplit,

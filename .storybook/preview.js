@@ -54,6 +54,10 @@ const preview = {
     },
   },
   decorators: [
+    (story) => ({
+      components: { story },
+      template: '<div class="antialiased"><story /></div>'
+    }),
     withThemeByClassName({
       themes: {
         light: '',

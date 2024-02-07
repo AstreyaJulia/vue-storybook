@@ -5,11 +5,6 @@ export default {
   name: 'Placeholder-Basic',
 
   props: {
-    className: {
-      type: String,
-      required: false,
-      default: ''
-    },
     children: {
       type: Node,
       required: false
@@ -21,8 +16,7 @@ export default {
 
     return {
       classes: computed(() => ({
-        'rounded-md border-2 border-dashed border-grayscale-200 dark:border-grayscale-800': true,
-        [props.className]: true
+        'rounded-md border-2 border-dashed border-gray-200 dark:border-gray-800': true
       }))
     }
   }

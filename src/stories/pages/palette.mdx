@@ -2,41 +2,27 @@ import {Meta, Unstyled} from "@storybook/blocks";
 import PaletteSection from "../assets/components/PaletteSection/PaletteSection.vue";
 import UIColorsSection from "../assets/components/PaletteSection/UIColorsSection.vue";
 import TypographyElement from "@/components/ui/TypographyElement.vue";
+import StoryHeader from "@/stories/assets/components/StoryHeader.vue";
 
 <Meta title="Палитра"/>
 
 <Unstyled>
-    <TypographyElement variant="h1" className="mb-10">Цветовые схемы и палитра</TypographyElement>
+    <StoryHeader header="Цветовые схемы и палитра" status="test"/>
 
-    <TypographyElement variant="h2" className="mb-4">Цветовые схемы</TypographyElement>
-    <UIColorsSection />
+    {/*<TypographyElement variant="h2" className="mb-4">Цветовые схемы</TypographyElement>*/}
+    {/* <UIColorsSection/> */}
 
-    <TypographyElement variant="h2" className="my-6">Палитра</TypographyElement>
-    <TypographyElement variant="text-main" className="mb-4">
-        <span>За основу взяты бесплатные для коммерческого использования</span>
-        <a className="text-brand-600 hover:text-brand-700 dark:text-brand-400 hover:dark:text-brand-300 hover:underline mx-1"
-           href="https://preline.co/figma.html"
-           target="_blank"
-           rel="noreferrer"
-        >Preline UI</a>
-        <span>и</span>
-        <a
-            className="text-brand-600 hover:text-brand-700 dark:text-brand-400 hover:dark:text-brand-300 hover:underline mx-1"
-            href="https://www.untitledui.com/free-figma-ui-kit"
-            target="_blank"
-            rel="noreferrer"
-        >Untitled UI</a>
-        <span>.</span>
-    </TypographyElement>
+    {/*<TypographyElement variant="h2" className="my-6">Палитра</TypographyElement>*/}
 
-    <TypographyElement variant="text-main" className="mb-4">В цветовую систему добавлены коэффициенты контрастности WCAG 2.1 (с фоном #ffffff).</TypographyElement>
+    {/*<TypographyElement variant="text-main" className="mb-4">В цветовую систему добавлены коэффициенты контрастности
+        WCAG 2.1 (с фоном #ffffff).</TypographyElement>*/}
 
 
-    <PaletteSection section="main"/>
+    {/*<PaletteSection section="main"/>*/}
 
-    <PaletteSection section="states"/>
+    {/*<PaletteSection section="states"/>*/}
 
-    <PaletteSection section="secondary"/>
+    {/*<PaletteSection section="secondary"/>*/}
 
     <PaletteSection section="tailwind"/>
 

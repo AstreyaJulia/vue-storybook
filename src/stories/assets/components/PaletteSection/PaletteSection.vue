@@ -1,13 +1,23 @@
 <script>
-import themeConfig from '../../../../../configs/themeConfig.js'
-import colors from 'tailwindcss/colors'
 import PaletteElement from '@/stories/assets/components/PaletteSection/PaletteElement.vue'
 import { colorContrastRatio } from '@/utils/colorUtils.js'
 import TypographyElement from '@/components/ui/TypographyElement.vue'
 
+import themeConfig from '../../../../../configs/themeConfig.js'
+import resolveConfig from 'tailwindcss/resolveConfig'
+import tailwindConfig from '../../../../../tailwind.config.js'
+const fullConfig = resolveConfig(tailwindConfig)
+const colors = fullConfig.theme.colors
+
 const tailwindColors = Object.keys(colors).filter(
   (color) =>
     ![
+      'brand',
+      'accent',
+      'error',
+      'warning',
+      'success',
+      'info',
       'inherit',
       'black',
       'white',
@@ -157,32 +167,32 @@ export default {
 
 <template>
   <div class="pt-16">
-    <TypographyElement variant="h3" className="mb-4">
+    <TypographyElement variant="h3" :class="'mb-4'">
       {{ sectionSettings[section].title }}
     </TypographyElement>
-    <TypographyElement variant="text-main" className="mb-4">
+    <TypographyElement variant="text-main" :class="'mb-4'">
       {{ sectionSettings[section].description }}
     </TypographyElement>
     <div class="flex flex-col gap-y-8">
       <div v-for="color in sectionSettings[section].colors" :key="color" class="flex gap-x-8 py-10">
-        <div class="flex flex-col w-96">
+        <div class="flex flex-col w-48">
           <TypographyElement variant="h6">
             {{ color.title }} (<span class="capitalize"> {{ color.name.toString() }} </span>)
           </TypographyElement>
           <TypographyElement
             v-if="section === 'main' || section === 'states'"
             variant="text-main"
-            className="mb-4"
+            :class="'mb-4'"
           >
             {{ colorTranslation[color.color.toString().toLowerCase()] }} (<span class="capitalize">
               {{ color.color.toString() }} </span
             >)
           </TypographyElement>
-          <TypographyElement variant="text-secondary" className="mb-4">
+          <TypographyElement variant="text-secondary" :class="'mb-4'">
             {{ color.description }}
           </TypographyElement>
         </div>
-        <div class="flex flex-wrap gap-4">
+        <div class="grid grid-cols-5 gap-4">
           <PaletteElement
             v-if="color.name === 'grayscale'"
             :hex-color="'#ffffff'"

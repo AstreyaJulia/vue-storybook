@@ -1,3 +1,7 @@
+/** Преобразует hex-цвет в объект с RGB-цветом
+ * @param hex - hex-цвет
+ * @returns {{r: number, b: number, g: number}|null}
+ */
 function hexToRgb(hex) {
   const shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i
   hex = hex.replace(shorthandRegex, function (m, r, g, b) {
@@ -14,6 +18,10 @@ function hexToRgb(hex) {
     : null
 }
 
+/** Вычисляет уровень яркости hex-цвета
+ * @param color - hex-цвет
+ * @returns {number} - уровень яркости цвета
+ */
 function luminance(color) {
   const rgbColor = hexToRgb(color)
   const a = [rgbColor.r, rgbColor.g, rgbColor.b].map(function (v) {
@@ -23,6 +31,15 @@ function luminance(color) {
   return a[0] * 0.2126 + a[1] * 0.7152 + a[2] * 0.0722
 }
 
+/** Вычисляет доступность цвета
+ * @param color1 - hex-цвет
+ * @param color2 - hex-цвет
+ * @param mode - режим:
+ * 'normal text' - обычный текст
+ * 'large text' - крупный текст
+ * 'interface' - интерфейс
+ * @returns {{AA: null, AAA: null, pass: null}} - объект с параметрами доступности
+ */
 function colorContrastRatio(color1, color2, mode) {
   const color1luminance = luminance(color1)
   const color2luminance = luminance(color2)

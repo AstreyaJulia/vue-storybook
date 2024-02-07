@@ -1,8 +1,11 @@
 <script>
 import { luminance } from '@/utils/colorUtils.js'
 import TypographyElement from '@/components/ui/TypographyElement.vue'
-import colors from 'tailwindcss/colors'
 import themeConfig from '../../../../../configs/themeConfig.js'
+import resolveConfig from 'tailwindcss/resolveConfig'
+import tailwindConfig from '../../../../../tailwind.config.js'
+const fullConfig = resolveConfig(tailwindConfig)
+const colors = fullConfig.theme.colors
 
 export default {
   name: 'UI-Colors-Section',
@@ -35,7 +38,7 @@ export default {
         :key="color"
         class="flex flex-col gap-3"
       >
-        <TypographyElement variant="text-main" text-color="text-grayscale-700">
+        <TypographyElement variant="text-main" text-color="text-gray-700">
           <span class="capitalize"> {{ color.name }} </span> (<span class="capitalize">
             {{ color.color.toString() }} </span
           >)
@@ -61,7 +64,7 @@ export default {
                     ? '#ffffff'
                     : colors[color.color][color.ui.light[variant]].toString()
                 ).toFixed(2) >= 0.25
-                  ? 'text-gray-950'
+                  ? 'text-gray-900'
                   : 'text-gray-50'
               "
             >
@@ -76,7 +79,7 @@ export default {
                     ? '#ffffff'
                     : colors[color.color][color.ui.light[variant]].toString()
                 ).toFixed(2) >= 0.25
-                  ? 'text-gray-950'
+                  ? 'text-gray-900'
                   : 'text-gray-50'
               "
             >
@@ -91,7 +94,7 @@ export default {
       </div>
     </div>
     <TypographyElement variant="h3"> Тёмная тема </TypographyElement>
-    <div class="grid grid-cols-6 gap-8 bg-grayscale-950 p-5">
+    <div class="grid grid-cols-6 gap-8 bg-black p-5">
       <div
         v-for="color in [
           ...themeConfig.colors.main,
@@ -101,7 +104,7 @@ export default {
         :key="color"
         class="flex flex-col gap-3"
       >
-        <TypographyElement variant="text-main" text-color="text-grayscale-300">
+        <TypographyElement variant="text-main" text-color="text-gray-300">
           <span class="capitalize"> {{ color.name }} </span> (<span class="capitalize">
             {{ color.color.toString() }} </span
           >)
@@ -127,7 +130,7 @@ export default {
                     ? '#ffffff'
                     : colors[color.color][color.ui.dark[variant]].toString()
                 ).toFixed(2) >= 0.25
-                  ? 'text-gray-950'
+                  ? 'text-gray-900'
                   : 'text-gray-50'
               "
             >
@@ -142,7 +145,7 @@ export default {
                     ? '#ffffff'
                     : colors[color.color][color.ui.dark[variant]].toString()
                 ).toFixed(2) >= 0.25
-                  ? 'text-gray-950'
+                  ? 'text-gray-900'
                   : 'text-gray-50'
               "
             >

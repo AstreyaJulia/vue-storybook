@@ -1,0 +1,77 @@
+import {Canvas, Controls, Meta, Source, Unstyled} from "@storybook/blocks";
+import * as CardStories from "./CardBasic.stories.js";
+import StoryHeader from "@/stories/assets/components/StoryHeader.vue";
+import TypographyElement from "@/components/ui/TypographyElement.vue";
+
+<Meta of={CardStories}/>
+<Unstyled>
+
+    <StoryHeader header="Карточка" status="test">
+        <TypographyElement variant="text-secondary">Контейнер, ограничивающий содержимое.</TypographyElement>
+    </StoryHeader>
+
+    <TypographyElement variant="text-main">Контейнер, ограничивающий содержимое с белым или светло-серым фоном, с тенью и скруглением углов. Отступы, размеры не заданы. Рекомендуемый
+        внутренний отступ `p-5`.</TypographyElement>
+
+    <Canvas of={CardStories._Card}/>
+    <TypographyElement variant="h6">Параметры</TypographyElement>
+    <Controls/>
+
+    <TypographyElement variant="h6">Код компонента</TypographyElement>
+    <Source of={CardStories._Card}/>
+
+    <TypographyElement variant="h6">{CardStories.BasicCard.name}</TypographyElement>
+    <Canvas of={CardStories.BasicCard}/>
+
+    <TypographyElement variant="h6">{CardStories.CardWithHeading.name}</TypographyElement>
+    <Canvas of={CardStories.CardWithHeading}/>
+
+    <TypographyElement className='mb-6' variant="h6">{CardStories.CardWithFooter.name}</TypographyElement>
+    <TypographyElement variant="text-main">Компонент `<CardHeading/>` можно использовать как заголовок или как футер карточки -
+        зависит от расположения компонента в разметке.</TypographyElement>
+    <Canvas of={CardStories.CardWithFooter}/>
+
+    <TypographyElement className='mb-6' variant="h6">{CardStories.CardWithImage.name}</TypographyElement>
+    <TypographyElement variant="text-main">Добавьте компоненту карточки селектор `overflow-hidden`, чтобы углы изображения
+        скруглились.</TypographyElement>
+    <Canvas of={CardStories.CardWithImage}/>
+
+    <TypographyElement className='mb-6' variant="h6">{CardStories.CardWithImageInsideBody.name}</TypographyElement>
+    <TypographyElement variant="text-main">Добавьте изображение с селектором `rounded-lg` внутрь компонента `CardBody` для
+        которого добавьте селекторы `overflow-hidden`.</TypographyElement>
+    <Canvas of={CardStories.CardWithImageInsideBody}/>
+
+    <TypographyElement variant="h6">{CardStories.CardWithButton.name}</TypographyElement>
+    <Canvas of={CardStories.CardWithButton}/>
+
+    <TypographyElement variant="h6">{CardStories.CardOverlay.name}</TypographyElement>
+    <Canvas of={CardStories.CardOverlay}/>
+
+    <TypographyElement variant="h6">{CardStories.CardHorizontal.name}</TypographyElement>
+    <Canvas of={CardStories.CardHorizontal}/>
+
+    <TypographyElement variant="h6">{CardStories.CardWithCentredBody.name}</TypographyElement>
+    <Canvas of={CardStories.CardWithCentredBody}/>
+
+    <TypographyElement className='mb-6' variant="h6">{CardStories.CardTopBordered.name}</TypographyElement>
+    <TypographyElement variant="text-main">Добавьте компоненту карточки селектор `border-t-4 border-t-brand-500`, чтобы сделать
+        верхний бордюр.</TypographyElement>
+    <Canvas of={CardStories.CardTopBordered}/>
+
+    <TypographyElement className='mb-6' variant="h6">{CardStories.CardLeftBordered.name}</TypographyElement>
+    <TypographyElement variant="text-main">Добавьте компоненту карточки селектор `border-l-8 border-l-brand-500`, чтобы сделать
+        бордюр слева.</TypographyElement>
+    <Canvas of={CardStories.CardLeftBordered}/>
+
+    <TypographyElement variant="h6">{CardStories.CardEmptyState.name}</TypographyElement>
+    <Canvas of={CardStories.CardEmptyState}/>
+
+    <TypographyElement className='mb-6' variant="h6">{CardStories.CardWithScroll.name}</TypographyElement>
+    <TypographyElement variant="text-main">Добавьте компоненту карточки селекторы, ограничивающие высоту карточки (иначе она просто растянется вниз), а так же селектор `overflow-hidden`. Оберните все внутренние элементы в
+        компонент `SimpleBar`, укажите необходимые атрибуты в `style` и пропсы, например, `style={{
+            maxHeight: "100%",
+            width: "100%"
+        }} forceVisible="y" autoHide={false}`.</TypographyElement>
+    <Canvas of={CardStories.CardWithScroll}/>
+
+</Unstyled>

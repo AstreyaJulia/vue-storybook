@@ -1,12 +1,13 @@
 import {Meta, Unstyled} from "@storybook/blocks";
 import TypographyElement from "@/components/ui/TypographyElement.vue";
+import StoryHeader from "@/stories/assets/components/StoryHeader.vue";
 
 <Meta title="Типографика"/>
 <Unstyled>
-    <TypographyElement variant="h1" className="mb-6">Типографика</TypographyElement>
+    <StoryHeader header="Типографика" status="test"/>
     <TypographyElement variant="h4" className="mb-4">Без засечек, основной</TypographyElement>
 
-    <div className="rounded-lg bg-white border border-grayscale-200 dark:border-grayscale-800 shadow-sm bg-dots-slate-200 p-5 mb-8">
+    <div className="rounded-lg bg-white border border-gray-200 dark:border-gray-800 shadow-sm bg-dots-slate-200 p-5 mb-8">
         <TypographyElement variant="text-main" className="mb-4">Open Sans</TypographyElement>
         <TypographyElement variant="h1" className="mb-4">Ag</TypographyElement>
         <TypographyElement variant="text-main" className="mb-4">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br/>abcdefghijklmnopqrstuvwxyz<br/>0123456789</TypographyElement>
@@ -15,7 +16,7 @@ import TypographyElement from "@/components/ui/TypographyElement.vue";
     </div>
     <TypographyElement variant="h4" className="mb-4">С засечками, дополнительный</TypographyElement>
 
-    <div className="rounded-lg bg-white border border-grayscale-200 dark:border-grayscale-800 shadow-sm bg-dots-slate-200 p-5 mb-8">
+    <div className="rounded-lg bg-white border border-gray-200 dark:border-gray-800 shadow-sm bg-dots-slate-200 p-5 mb-8">
         <TypographyElement variant="text-main" className="mb-4 font-serif">Noto Serif</TypographyElement>
         <TypographyElement variant="h1" className="mb-4 font-serif">Ag</TypographyElement>
         <TypographyElement variant="text-main" className="mb-4 font-serif">ABCDEFGHIJKLMNOPQRSTUVWXYZ<br/>abcdefghijklmnopqrstuvwxyz<br/>0123456789</TypographyElement>

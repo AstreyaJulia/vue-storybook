@@ -7,7 +7,7 @@ export default {
   setup() {
     return {
       classes: computed(() => ({
-        'border-t border-grayscale-200 dark:border-grayscale-800 bg-grayscale-100 dark:bg-grayscale-900 p-4 text-sm text-grayscale-500 dark:text-grayscale-400': true
+        'border-t border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-4 text-sm text-gray-500 dark:text-gray-400': true
       }))
     }
   }

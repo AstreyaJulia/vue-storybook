@@ -37,8 +37,6 @@ const imageSizes = {
 /** Цвета и варианты аватаров */
 const colors = {
   soft: {
-    grayscale:
-      'bg-grayscale-100 dark:bg-grayscale-900 text-grayscale-700 fill-grayscale-700 focus:ring-grayscale-300/50',
     brand: 'bg-brand-100 text-brand-700 fill-brand-700 focus:ring-brand-300/50',
     accent: 'bg-accent-100 text-accent-700 fill-accent-700 focus:ring-accent-300/50',
     error: 'bg-error-100 text-error-700 fill-error-700 focus:ring-error-300/50',
@@ -70,7 +68,6 @@ const colors = {
     rose: 'bg-rose-100 text-rose-700 fill-rose-700 focus:ring-rose-300/50'
   },
   white: {
-    grayscale: 'bg-white/50 text-grayscale-700 fill-grayscale-700 focus:ring-grayscale-300/50',
     brand: 'bg-white/50 text-brand-700 fill-brand-700 focus:ring-brand-300/50',
     accent: 'bg-white/50 text-accent-700 fill-accent-700 focus:ring-accent-300/50',
     error: 'bg-white/50 text-error-700 fill-error-700 focus:ring-error-300/50',
@@ -102,7 +99,6 @@ const colors = {
     rose: 'bg-white/50 text-rose-700 fill-rose-700 focus:ring-rose-300/50'
   },
   solid: {
-    grayscale: 'bg-grayscale-600 text-grayscale-50 fill-grayscale-50 focus:ring-grayscale-300/50',
     brand: 'bg-brand-600 text-brand-50 fill-brand-50 focus:ring-brand-300/50',
     accent: 'bg-accent-600 text-accent-50 fill-accent-50 focus:ring-accent-300/50',
     error: 'bg-error-600 text-error-50 fill-error-50 focus:ring-error-300/50',
@@ -147,7 +143,6 @@ const shapes = {
  * @type {{sky: string, pink: string, green: string, violet: string, teal: string, amber: string, error: string, accent: string, cyan: string, red: string, orange: string, gray: string, blue: string, success: string, warning: string, rose: string, indigo: string, brand: string, slate: string, info: string}}
  */
 const statusColors = {
-  grayscale: 'bg-grayscale-500',
   brand: 'bg-brand-500',
   accent: 'bg-accent-500',
   error: 'bg-error-500',
@@ -291,12 +286,12 @@ export default {
 
     return {
       loadingAvatar: computed(() => ({
-        'flex-shrink-0 inline-flex items-center justify-center bg-grayscale-200 animate-pulse': true,
+        'flex-shrink-0 inline-flex items-center justify-center bg-gray-200 animate-pulse': true,
         [shapes[props.shape]]: true,
         [sizes[props.size]]: true
       })),
       loadingLabel: computed(() => ({
-        'font-medium leading-none d-flex items-center justify-center text-grayscale-700 fill-grayscale-700': true,
+        'font-medium leading-none d-flex items-center justify-center text-gray-700 fill-gray-700': true,
         [sizes[props.size]]: true
       })),
       notLoadingAvatar: computed(() => ({

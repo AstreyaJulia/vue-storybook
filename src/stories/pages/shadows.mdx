@@ -1,10 +1,12 @@
 import {Meta, Unstyled} from "@storybook/blocks";
 import storybook0005 from '../assets/images/storybook0005.jpg'
 import TypographyElement from "@/components/ui/TypographyElement.vue";
+import StoryHeader from "@/stories/assets/components/StoryHeader.vue";
 
 <Meta title="Тени и размытие фона"/>
 <Unstyled>
-    <TypographyElement variant="h1" className="mb-10">Тени и размытие фона</TypographyElement>
+    <StoryHeader header="Тени и размытие фона" status="ready"/>
+
     <TypographyElement variant="h2" className="mb-10">Тени</TypographyElement>
     <TypographyElement variant="text-main" className="mb-4">Тени позволяют добавить глубины и реализма дизайнам, располагая элементы по оси
         Z. (В тёмном режиме тени не используются)</TypographyElement>
@@ -12,30 +14,30 @@ import TypographyElement from "@/components/ui/TypographyElement.vue";
 
     <div className="flex items-center gap-7 flex-wrap">
         <div className="flex flex-col gap-5">
-            <span className="w-28 h-28 rounded-lg shadow-sm dark:shadow-none bg-white dark:bg-grayscale-900"/>
+            <span className="w-28 h-28 rounded-lg shadow-sm dark:shadow-none bg-white dark:bg-gray-900"/>
             <TypographyElement variant="text-main">shadow-sm</TypographyElement>
         </div>
         <div className="flex flex-col gap-5">
-            <span className="w-28 h-28 rounded-lg shadow dark:shadow-none bg-white dark:bg-grayscale-900"/>
+            <span className="w-28 h-28 rounded-lg shadow dark:shadow-none bg-white dark:bg-gray-900"/>
             <TypographyElement variant="text-main">shadow</TypographyElement>
         </div>
         <div className="flex flex-col gap-5">
-            <span className="w-28 h-28 rounded-lg shadow-md dark:shadow-none bg-white dark:bg-grayscale-900"/>
+            <span className="w-28 h-28 rounded-lg shadow-md dark:shadow-none bg-white dark:bg-gray-900"/>
             <TypographyElement variant="text-main">shadow-md</TypographyElement>
         </div>
         <div className="flex flex-col gap-5">
-            <span className="w-28 h-28 rounded-lg shadow-lg dark:shadow-none bg-white dark:bg-grayscale-900"/>
+            <span className="w-28 h-28 rounded-lg shadow-lg dark:shadow-none bg-white dark:bg-gray-900"/>
             <TypographyElement variant="text-main">shadow-lg</TypographyElement>
         </div>
         <div className="flex flex-col gap-5">
-            <span className="w-28 h-28 rounded-lg shadow-xl dark:shadow-none bg-white dark:bg-grayscale-900"/>
+            <span className="w-28 h-28 rounded-lg shadow-xl dark:shadow-none bg-white dark:bg-gray-900"/>
             <TypographyElement variant="text-main">shadow-xl</TypographyElement>
         </div>
     </div>
     <TypographyElement variant="h3" className="my-10">Внутренняя тень (box shadow inner)</TypographyElement>
     <div className="flex items-center gap-7 flex-wrap">
         <div className="flex flex-col gap-5">
-            <span className="w-28 h-28 rounded-lg shadow-inner dark:shadow-none bg-white dark:bg-grayscale-900"/>
+            <span className="w-28 h-28 rounded-lg shadow-inner dark:shadow-none bg-white dark:bg-gray-900"/>
             <TypographyElement variant="text-main">shadow-inner</TypographyElement>
         </div>
     </div>
@@ -47,31 +49,31 @@ import TypographyElement from "@/components/ui/TypographyElement.vue";
 
     <div className="flex items-center gap-7 flex-wrap mt-16">
         <div className="flex flex-col gap-5">
-            <img src={storybook0005} alt="Изображение" className="w-28 h-28 rounded-lg blur-sm bg-white dark:bg-grayscale-900"/>
+            <img src={storybook0005} alt="Изображение" className="w-28 h-28 rounded-lg blur-sm bg-white dark:bg-gray-900"/>
             <TypographyElement variant="text-main">blur-sm</TypographyElement>
         </div>
         <div className="flex flex-col gap-5">
-            <img src={storybook0005} alt="Изображение" className="w-28 h-28 rounded-lg blur bg-white dark:bg-grayscale-900"/>
+            <img src={storybook0005} alt="Изображение" className="w-28 h-28 rounded-lg blur bg-white dark:bg-gray-900"/>
             <TypographyElement variant="text-main">blur</TypographyElement>
         </div>
         <div className="flex flex-col gap-5">
-            <img src={storybook0005} alt="Изображение" className="w-28 h-28 rounded-lg blur-md bg-white dark:bg-grayscale-900"/>
+            <img src={storybook0005} alt="Изображение" className="w-28 h-28 rounded-lg blur-md bg-white dark:bg-gray-900"/>
             <TypographyElement variant="text-main">blur-md</TypographyElement>
         </div>
         <div className="flex flex-col gap-5">
-            <img src={storybook0005} alt="Изображение" className="w-28 h-28 rounded-lg blur-lg bg-white dark:bg-grayscale-900"/>
+            <img src={storybook0005} alt="Изображение" className="w-28 h-28 rounded-lg blur-lg bg-white dark:bg-gray-900"/>
             <TypographyElement variant="text-main">blur-lg</TypographyElement>
         </div>
         <div className="flex flex-col gap-5">
-            <img src={storybook0005} alt="Изображение" className="w-28 h-28 rounded-lg blur-xl bg-white dark:bg-grayscale-900"/>
+            <img src={storybook0005} alt="Изображение" className="w-28 h-28 rounded-lg blur-xl bg-white dark:bg-gray-900"/>
             <TypographyElement variant="text-main">blur-xl</TypographyElement>
         </div>
         <div className="flex flex-col gap-5">
-            <img src={storybook0005} alt="Изображение" className="w-28 h-28 rounded-lg blur-2xl bg-white dark:bg-grayscale-900"/>
+            <img src={storybook0005} alt="Изображение" className="w-28 h-28 rounded-lg blur-2xl bg-white dark:bg-gray-900"/>
             <TypographyElement variant="text-main">blur-2xl</TypographyElement>
         </div>
         <div className="flex flex-col gap-5">
-            <img src={storybook0005} alt="Изображение" className="w-28 h-28 rounded-lg blur-3xl bg-white dark:bg-grayscale-900"/>
+            <img src={storybook0005} alt="Изображение" className="w-28 h-28 rounded-lg blur-3xl bg-white dark:bg-gray-900"/>
             <TypographyElement variant="text-main">blur-3xl</TypographyElement>
         </div>
     </div>

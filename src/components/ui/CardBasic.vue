@@ -3,8 +3,8 @@ import { reactive, computed } from 'vue'
 
 const variants = {
   default:
-    'bg-white dark:bg-grayscale-950 border border-grayscale-200 dark:border-grayscale-800 shadow-sm dark:shadow-none',
-  gray: 'bg-grayscale-50 dark:bg-grayscale-900'
+    'bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 shadow-sm dark:shadow-none',
+  gray: 'bg-gray-50 dark:bg-gray-900'
 }
 
 export default {
@@ -25,11 +25,6 @@ export default {
         return Object.keys(variants).indexOf(value) !== -1
       },
       default: Object.keys(variants)[0]
-    },
-    /** Дочерние элементы. */
-    children: {
-      type: Node,
-      required: false
     }
   },
 

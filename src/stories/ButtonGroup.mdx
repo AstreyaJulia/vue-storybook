@@ -1,10 +1,11 @@
 import {Canvas, Meta, Title, Unstyled} from "@storybook/blocks";
 import * as ButtonGroup from "./ButtonGroup.stories";
+import StoryHeader from "@/stories/assets/components/StoryHeader.vue";
 
 <Meta of={ButtonGroup} />
 
 <Unstyled>
-<Title>Группы кнопок</Title>
+    <StoryHeader header="Группы кнопок" status="test"/>
 
 <p className="story storybook-text">Группы кнопок объединяют наборы кнопок в панели инструментов или разделяют кнопки для более сложных компонентов. Группы кнопок также полезны для работы в качестве мини-вкладок в пользовательском интерфейсе, например, для переключения между диапазонами дат.</p>
 <h6 className="story storybook-docs-h6">{ButtonGroup.ButtonGroup.name}</h6>
